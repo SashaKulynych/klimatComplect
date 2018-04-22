@@ -28,15 +28,15 @@ class Footer extends Component {
                             <div className="col-sm-12 col-lg-6 ">
                                 <ul className="contacts">
                                     <li style={{fontSize:20}}>Контакти</li>
-                                    <li><i className="fas fa-envelope contactIcons"/>info@ klimatkomplect.com.ua</li>
-                                    <li><i className="fas fa-phone-volume contactIcons"/>+38 (066) 279 10 90</li>
+                                    <li><i className="fas fa-envelope contactIcons"/>info@klimatkomplect.com.ua</li>
+                                    <li><i className="fas fa-phone-volume contactIcons"/>+38 (044) 379 10 90</li>
                                 </ul>
                                 <div className="row footer_icon col-lg-12 col-sm-11 " >
                                     <div className="fb">
                                         <a href="https://www.facebook.com/klimatkomplekt/"><i className="fab fa-facebook-f"/></a>
                                     </div>
                                     <div className="tw">
-                                        <i className="fab fa-google-plus-g"> </i>
+                                        <a href="https://plus.google.com/u/4/110288975361999381293?hl=ru"><i className="fab fa-google-plus-g"> </i></a>
                                     </div>
                                     <div className="ig">
                                         <a href="https://www.instagram.com/klimatkomplekt.com.ua/"><i className="fab fa-instagram"/></a>
@@ -52,8 +52,12 @@ class Footer extends Component {
                         </div>
                     </div>
                     </div>
-                    <a href="https://www.patprofi.com/" className='col-12 text-center' style={{color:"#fff", position:"absolute", bottom:1 }}>Розробка сайту компанія P.A.T.Profi</a>
-
+                    <div  className='col-12 text-center row' style={{position:"absolute", bottom:1, display:'flex', justifyContent:"center" }}>
+                        <img src={require('./images/logo_com.png')} style={{height:45}} />
+                        <div>
+                        <a href="https://www.patprofi.com/" style={{color:"#fff", textAlign:'left'}}> Розробка сайту <br/> компанія P.A.T.Profi</a>
+                        </div>
+                    </div>
                 </div>
                 </div>
         )

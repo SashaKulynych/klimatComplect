@@ -39,7 +39,7 @@ ReactDOM.render(
                 <Route exact path="/category/:id" component={Categories} />
                 <Route exact path="/item/:id" component={Item} />
                 <Route exact path="/dealer" component={Dealer} />
-                <Route exact path="/text" component={Text} />
+                <Route exact path="/video" component={Text} />
                 <Route exact path="/reference" component={Reference} />
                 <Route exact path="/service" component={Service} />
                 <Route exact path="/about" component={About} />

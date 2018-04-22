@@ -55,13 +55,13 @@ class Header extends Component {
         API.getProducts()
         API.getModels();
 
-        // if(userInfo!==null){
-        //     await user.userInfo(userInfo)
-        // }
-        // await API.getShop(userInfo.id).then((value)=>{
-        //     console.log('userInfo',value)
-        //     this.setState({count:value})
-        // });
+        if(userInfo!==null){
+            await user.userInfo(userInfo)
+        }
+        await API.getShop(userInfo.id).then((value)=>{
+            console.log('userInfo',value)
+            this.setState({count:value})
+        });
     }
 
     personType(index){this.setState({personType:index})}
@@ -342,7 +342,7 @@ class Header extends Component {
                                 <a href="https://www.facebook.com/klimatkomplekt/"><i className="fab fa-facebook-f"/></a>
                             </div>
                             <div className="tw">
-                                <i className="fab fa-google-plus-g"> </i>
+                                <a href="https://plus.google.com/u/4/110288975361999381293?hl=ru"><i className="fab fa-google-plus-g"> </i></a>
                             </div>
                             <div className="ig">
                                 <a href="https://www.instagram.com/klimatkomplekt.com.ua/"><i className="fab fa-instagram"/></a>
@@ -351,11 +351,11 @@ class Header extends Component {
                         <div className="row col headerRightPart">
                             {/*<div className="text phone">+380443791090 </div>*/}
                             {/*<span className="phone_1">+380662791090 +380682791090 +380932791090</span>*/}
-                            <span data-toggle="collapse" className="text phone" data-target="#6"><i class="fas fa-arrow-down"></i>   +38 (066) 279 10 90</span>
+                            <span data-toggle="collapse" className="text phone" data-target="#6"><i class="fas fa-arrow-down"></i>   +38 (044) 379 10 90</span>
                             <ul id="6" className="collapse hide_phone">
                                 <li><span>  +38 (066) 279 10 90</span></li>
-                                <li><span>  +38 (066) 279 10 90</span></li>
-                                <li><span>  +38 (066) 279 10 90</span></li>
+                                <li><span>  +38 (068) 279 10 90</span></li>
+                                <li><span>  +38 (068) 279 10 90</span></li>
                             </ul>
                             <div className="text email">info@klimatkomplect.com.ua</div>
                             {this.props.userInfo===null?
@@ -410,7 +410,7 @@ class Header extends Component {
                                     <span onClick={()=>this.props.history.push('/contacts')}>КОНТАКТИ</span>
                                     <span data-toggle="collapse" data-target="#4">ПІДТРИМКА &#8595;</span>
                                     <ul  id="4" className="collapse">
-                                        <li onClick={()=>this.props.history.push('/text')}><span>Відеокурс</span></li>
+                                        <li onClick={()=>this.props.history.push('/video')}><span>Відеокурс</span></li>
                                         <li onClick={()=>this.props.history.push('/support')}><span>Зв'язок</span></li>
                                     </ul>
                                 </div>
@@ -464,7 +464,7 @@ class Header extends Component {
                                     <li>
                                         <span data-toggle="collapse" data-target="#4">ПІДТРИМКА</span>
                                         <ul  id="4" className="collapse">
-                                            <li onClick={()=>this.props.history.push('/text')}><span className="potd">Відеокурс</span></li>
+                                            <li onClick={()=>this.props.history.push('/video')}><span className="potd">Відеокурс</span></li>
                                             <li onClick={()=>this.props.history.push('/support')}><span className="potd">Зв'язок</span></li>
                                         </ul>
                                     </li>

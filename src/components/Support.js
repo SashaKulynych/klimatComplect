@@ -74,7 +74,7 @@ class Support extends Component {
                             <div className="phones">
                                 <i className="fas fa-phone-volume phoneIcon"/>
                                 <div className="numbers">
-                                    <span>+38 (066) 279 10 90</span>
+                                    <span>+38 (044) 379 10 90</span>
                                     <span>+38 (066) 279 10 90</span>
                                 </div>
                             </div>

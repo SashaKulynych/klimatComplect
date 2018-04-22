@@ -284,12 +284,30 @@ ul{
 }
 
 
+.video{
+    margin-left: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    max-width: 300px;
+}
+
+.video p{
+    text-align: center;
+}
+
+.video h5{
+    font-size: 14px;
+    text-align: center;
+    color: grey;
+}
+
 .docm_div_1, .docm_div_2 p{
+    position: absolute;
     text-align: center;
     margin: 0;
     font-family: "Open Sans";
     font-size: 30px;
-    padding: 24px 0 74px 0;
+    padding: 24px 0 74px 0px;
     color: white;
 }
 

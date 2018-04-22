@@ -66,7 +66,15 @@
     justify-content: flex-end;
 }
 
-.fb,.tw,.ig a:hover{
+.fb a:hover{
+    color: #000;
+}
+
+.ig a:hover{
+    color: #000;
+}
+
+.tw a:hover{
     color: #000;
 }
 
@@ -75,6 +83,10 @@
 }
 
 .ig a{
+    color: #000;
+}
+
+.tw a{
     color: #000;
 }
 

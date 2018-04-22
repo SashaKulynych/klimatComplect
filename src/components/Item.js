@@ -146,7 +146,7 @@ class Item extends Component {
                                     <span>Опис</span>
                                 </div>
                                 <div className="rightButtonStyle col-sm-12">
-                                    <span onClick={()=>this.props.history.push('/Docm/'+this.props.match.params.id)}>Технічні дані</span>
+                                    <span onClick={()=>this.props.history.push('/Docm')}>Технічні дані</span>
                                 </div>
                                 <div  className="rightButtonStyle col-sm-12">
                                     <span >Характеристики</span>

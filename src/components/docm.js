@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import './styles/category.css'
 import { withRouter } from 'react-router'
 import * as API from "../actions/api";
-
+import Loader from 'react-loader-spinner'
 // import * as API from '../actions/api'
 
 
@@ -72,14 +72,14 @@ class Docm extends Component {
                         <div className="docm_div_1">
                             <span>{value.name}</span>
                         </div>
-                        <div className="row" style={{paddingLeft:20}}>
+                        <div className="row" style={{paddingLeft:20, position:"relative", zIndex:100, paddingTop:50}}>
                         {array.length!==0?array.map((val,index)=>{
                             return(
                                 <div key={index} style={{margin:20}}>
                                     <a style={{paddingRight:10}} href={host+"api/get-techdata?name="+value.name}>
-                                        <li key={index} style={{width:200,height:200,border:"1px solid #acacac", background:"#fff"}}>
+                                        <li key={index} style={{width:200,height:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
                                             <div className="itemTop">
-                                                {value.name}
+                                                {val.name}
                                             </div>
                                             <div className="item_2" style={{background:"#fff"}}>
                                                 <img className="DocmPicture" src={require('./images/cooler.png')} alt=""/>
@@ -108,7 +108,13 @@ class Docm extends Component {
                     ТЕХНІЧНА ДОКУМЕНТАЦІЯ
                 </div>
                 {
-                    this.state.loading?<div>Загрузка...</div>:
+                    this.state.loading?<div style={{textAlign:"center", padding:20}}><Loader
+                        type="TailSpin"
+                        color="yellow"
+                        height="100"
+                        width="100"
+                        />
+                        </div>:
                         <div>
                             <div className="row col-12 container_wrap">
                                 {manufacts}

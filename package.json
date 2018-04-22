@@ -9,6 +9,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
+    "react-loader-spinner": "^2.0.0",
     "react-modal-dialog": "^4.0.7",
     "react-notify-toast": "^0.4.0",
     "react-redux": "^5.0.7",
