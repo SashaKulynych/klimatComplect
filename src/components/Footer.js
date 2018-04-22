@@ -55,7 +55,7 @@ class Footer extends Component {
                     <div  className='col-12 text-center row' style={{position:"absolute", bottom:1, display:'flex', justifyContent:"center" }}>
                         <img src={require('./images/logo_com.png')} style={{height:45}} />
                         <div>
-                        <a href="https://www.patprofi.com/" style={{color:"#fff", textAlign:'left'}}> Розробка сайту <br/> компанія P.A.T.Profi</a>
+                        <a href="https://www.patprofi.com/" style={{color:"#fff", textAlign:'left', display:"flex", paddingLeft:5}}> Розробка сайту <br/> компанія P.A.T.Profi</a>
                         </div>
                     </div>
                 </div>
