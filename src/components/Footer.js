@@ -19,15 +19,15 @@ class Footer extends Component {
                         <div style={{margin:"auto"}} className="col-lg-6 col-sm-12  row d-flex justify-content-center footerCenter">
                             <div className="col-sm-12 col-lg-6 ">
                                 <ul className="footerList">
-                                    <li>Про нас</li>
-                                    <li>Обладнання</li>
-                                    <li>Референс</li>
-                                    <li>Контакти</li>
+                                    <li onClick={()=>this.props.history.push('/about')}>Про нас</li>
+                                    <li onClick={()=>this.props.history.push('/Docm')}>Обладнання</li>
+                                    <li onClick={()=>this.props.history.push('/reference')}>Референс</li>
+                                    <li onClick={()=>this.props.history.push('/contacts')}>Контакти</li>
                                 </ul>
                             </div>
                             <div className="col-sm-12 col-lg-6 ">
                                 <ul className="contacts">
-                                    <li style={{fontSize:20}}>Контакти</li>
+                                    <li style={{fontSize:20}} >Контакти</li>
                                     <li><i className="fas fa-envelope contactIcons"/>info@klimatkomplect.com.ua</li>
                                     <li><i className="fas fa-phone-volume contactIcons"/>+38 (044) 379 10 90</li>
                                 </ul>
@@ -53,9 +53,9 @@ class Footer extends Component {
                     </div>
                     </div>
                     <div  className='col-12 text-center row' style={{position:"absolute", bottom:1, display:'flex', justifyContent:"center" }}>
-                        <img src={require('./images/logo_com.png')} style={{height:45}} />
+                       <a href="https://www.patprofi.com/"><img src={require('./images/logo_com.png')} style={{height:45}} /></a>
                         <div>
-                        <a href="https://www.patprofi.com/" style={{color:"#fff", textAlign:'left', display:"flex", paddingLeft:5}}> Розробка сайту <br/> компанія P.A.T.Profi</a>
+                        <a href="https://www.patprofi.com/" style={{color:"#fff",fontFamily:"Open Sans", textAlign:'left', display:"flex", paddingLeft:5}}> Розробка сайту <br/> компанія P.A.T.Profi</a>
                         </div>
                     </div>
                 </div>

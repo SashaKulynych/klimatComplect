@@ -13,6 +13,7 @@ class MainPage extends Component {
         super();
         this.state= {
             news: [],
+            paper:[],
             data: [
                 {name: '14.02.18', total: 8, paid: 7},
                 {name: '15.02.18', total: 9, paid: 9},
@@ -30,7 +31,8 @@ class MainPage extends Component {
     componentDidMount(){
         API.getNews().then((value)=>{
             console.log('getNews',value)
-            this.setState({news:value})
+            this.setState({news:value.news})
+            this.setState({paper:value.papers})
         });
     }
     render() {
@@ -63,13 +65,13 @@ class MainPage extends Component {
             )
         });
 
-        let newsSecond=this.state.news.slice(2,4).map((value)=>{
+        let newsSecond=this.state.paper.slice(0,2).map((value)=>{
             let maxLength = 15;
             let title =value.title.length>15?value.title.substring(0, maxLength) + '...':value.title;
             let img = value.img===''?{backgroundImage: `url(${require('./images/newsPicture1.png')}`}:
                 {backgroundImage: "url(http://admin.klimatkomplect.com.ua/image/news/"+value.img+")"};
             return(
-                <div className="col newsBlock"  onClick={()=>this.props.history.push('/News/'+ value.id)}>
+                <div className="col newsBlock"  onClick={()=>this.props.history.push('/Paper/'+ value.id)}>
                     <div className="newsPicture d-flex justify-content-center align-items-center"
                          style={img}>
                         <div className="pictureTitle"></div>
@@ -392,7 +394,7 @@ class MainPage extends Component {
                                 {newsSecond}
                             </div>
                             <div className="d-flex justify-content-center">
-                                <span className="allNews"  onClick={()=>this.props.history.push('/AllNews')}>Всі статті</span>
+                                <span className="allNews"  onClick={()=>this.props.history.push('/AllPaper')}>Всі статті</span>
                             </div>
                         </div>
                     </div>

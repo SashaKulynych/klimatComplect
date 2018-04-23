@@ -32,6 +32,12 @@ export async function getNewsPage() {
     }).then((response)=>response.json())
 }
 
+export async function getAllPaper() {
+    return await fetch(host+'api/?all_papers=1', {
+        method: 'GET',
+    }).then((response)=>response.json())
+}
+
 export async function getProduct(id) {
     return await fetch(host+'api/get-product/'+id, {
         method: 'GET',

@@ -72,10 +72,10 @@ class Docm extends Component {
                         <div className="docm_div_1">
                             <span>{value.name}</span>
                         </div>
-                        <div className="row" style={{paddingLeft:20, position:"relative", zIndex:100, paddingTop:50}}>
+                        <div className="row" style={{margin:0,paddingLeft:20, position:"relative", zIndex:100, paddingTop:50,display:"flex", justifyContent:"center"}}>
                         {array.length!==0?array.map((val,index)=>{
                             return(
-                                <div key={index} style={{margin:20}}>
+                                <div key={index} style={{marginLeft:20, marginRight:20}}>
                                     <a style={{paddingRight:10}} href={host+"api/get-techdata?name="+value.name}>
                                         <li key={index} style={{width:200,height:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
                                             <div className="itemTop">

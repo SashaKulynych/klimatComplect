@@ -196,7 +196,7 @@ ul{
     text-align: left;
 }
 .textInSlider{
-    padding: 30px 30px 50px 80px;
+    padding: 55px 30px 50px 80px;
     color: white;
     font-size: 22px;
     cursor: default;
@@ -251,6 +251,7 @@ ul{
 }
 
 .docmBottom{
+    text-align: center;
     color: black;
 }
 
