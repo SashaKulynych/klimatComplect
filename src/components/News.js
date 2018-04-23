@@ -42,7 +42,7 @@ class News extends Component {
                          style={img}>
                     </div>
 
-                    <div   className="newsDescription">
+                    <div   className="newsDescription container_wrap col-md-10 col-sm-12 " style={{color:"#000", fontSize:24,  textAlign:"justify"}}>
                         {this.state.News.text}
                     </div>
                 </div>}

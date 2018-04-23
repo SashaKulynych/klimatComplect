@@ -391,7 +391,7 @@ ul{
     font-family: "Open Sans";
     color: #3b3b3b;
     display:inline-block;
-    width:200px;
+    width:100%;
     white-space: nowrap;
     overflow:hidden !important;
     text-overflow: ellipsis;
@@ -411,7 +411,7 @@ cursor: pointer;
     color: #808080;
     overflow: hidden;
     text-overflow:ellipsis;
-    height:90px;
+    height:100%;
 }
 .allNews{
     width: 368px;

@@ -42,7 +42,7 @@ class Paper extends Component {
                          style={img}>
                     </div>
 
-                    <div   className="newsDescription" style={{color:"#000", fontSize:24, paddingTop:20}}>
+                    <div   className="newsDescription col-md-10 col-sm-12 container_wrap" style={{color:"#000", fontSize:24, textAlign:"justify"}}>
                         {this.state.News.text}
                     </div>
                 </div>}

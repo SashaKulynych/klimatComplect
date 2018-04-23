@@ -58,7 +58,7 @@ class MainPage extends Component {
                         <div className="pictureTitle"></div>
                     </div>
                     <div className="newsTitle d-flex justify-content-center">{title}</div>
-                    <div className="newsDescription">
+                    <div className="newsDescription" style={{height:90}}>
                         {value.text}
                     </div>
                 </div>
@@ -77,7 +77,7 @@ class MainPage extends Component {
                         <div className="pictureTitle"></div>
                     </div>
                     <div className="newsTitle d-flex justify-content-center">{title}</div>
-                    <div className="newsDescription">
+                    <div className="newsDescription" style={{height:90}}>
                         {value.text}
                     </div>
                 </div>

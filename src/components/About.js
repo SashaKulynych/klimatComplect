@@ -14,7 +14,7 @@ class About extends Component {
             <div>
                 <Header/>
                 <div className="text">
-                    <div className="textContainer">
+                    <div className="textContainer container_wrap">
                         <p>Компанія «КліматКомплект» пропонує професійне вентиляційне обладнання від провідних європейських брендів. Ми успішно працюємо в цій галузі з 2004 року, тож встигли зарекомендувати себе, як експерта та надійного партнера.</p>
                         <p>Ми пропонуємо такі послуги:</p>
                         <ul>
