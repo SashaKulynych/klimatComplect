@@ -57,11 +57,12 @@ class Header extends Component {
 
         if(userInfo!==null){
             await user.userInfo(userInfo)
-        }
+
         await API.getShop(userInfo.id).then((value)=>{
             console.log('userInfo',value)
             this.setState({count:value})
         });
+        }
     }
 
     personType(index){this.setState({personType:index})}

@@ -13,7 +13,11 @@ class Text extends Component {
         return (
             <div>
                 <Header/>
+                <div className="afterHeader">
+                    <img style={{width:"100%"}} src={require('./images/pictureCategory.png')} alt=""/>
+                </div>
                 <div className="text">
+                    <p className="col-12 title text-center" style={{marginTop:40}}>Відеокурси</p>
                     <div className="textContainer row">
                         <div className="video col">
                             <img  src={require('./images/textImg.png')} style={{width:"100%"}}/>
