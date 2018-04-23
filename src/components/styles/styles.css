@@ -196,10 +196,6 @@ ul{
     text-align: left;
 }
 .textInSlider{
-    background-image:url("../images/background1.png");
-    background-size: 100%;
-    background-position: right;
-    background-repeat: no-repeat;
     padding: 30px 30px 50px 80px;
     color: white;
     font-size: 22px;
@@ -286,6 +282,7 @@ ul{
 
 .video{
     margin-left: 10px;
+    margin-bottom: 10px;
     border: 1px solid gray;
     border-radius: 4px;
     max-width: 300px;
