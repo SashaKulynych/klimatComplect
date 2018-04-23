@@ -40,7 +40,7 @@ class AllPaper extends Component {
                         {value.text}
                     </div>
                     <div className="text-center">
-                        <button  onClick={()=>this.props.history.push('/Paper/'+ value.id)} className="allNews_1 col-12" >Відкрити новину</button>
+                        <button  onClick={()=>this.props.history.push('/Paper/'+ value.id)} className="allNews_1 col-12" >Відкрити статью</button>
                     </div>
                 </div>
             )

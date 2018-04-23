@@ -48,9 +48,7 @@ class Docm extends Component {
 
     }
 
-    Data(name){
-        API.getData(name)
-    }
+
     render() {
         let manufacts = this.state.manufacts.map((value,index)=>{
             return(
@@ -76,7 +74,7 @@ class Docm extends Component {
                         {array.length!==0?array.map((val,index)=>{
                             return(
                                 <div key={index} style={{marginLeft:20, marginRight:20}}>
-                                    <a style={{paddingRight:10}} href={host+"api/get-techdata?name="+value.name}>
+                                    <a style={{paddingRight:10}} href={host+"api/get-techdata?name="+val.name}>
                                         <li key={index} style={{width:200,height:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
                                             <div className="itemTop">
                                                 {val.name}

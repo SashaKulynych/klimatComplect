@@ -68,34 +68,38 @@ class Support extends Component {
                     <div className="afterHeader">
                         <img className="afterHeaderPicture" src={require('./images/pictureSupp.png')} alt=""/>
                     </div>
-                    <div className="d-flex row container_wrap" style={{margin:"0"}}>
+                    <div className="d-flex row" style={{margin:"0"}}>
                         <div className="col contactContainer">
-                            <div className="contact">КОНТАКТИ</div>
-                            <div className="phones">
-                                <i className="fas fa-phone-volume phoneIcon"/>
-                                <div className="numbers">
-                                    <span>+38 (044) 379 10 90</span>
-                                    <span>+38 (066) 279 10 90</span>
+                            <div style={{float:"right", maxWidth:"683"}}>
+                                <div className="contact">КОНТАКТИ</div>
+                                <div className="phones">
+                                    <i className="fas fa-phone-volume phoneIcon"/>
+                                    <div className="numbers">
+                                        <span>+38 (044) 379 10 90</span>
+                                        <span>+38 (066) 279 10 90</span>
+                                        <span>+38 (068) 279 10 90</span>
+                                        <span>+38 (093) 279 10 90</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="emails">
-                                <i className="fas fa-at emailIcon"/>
-                                <div className="numbers">
-                                    <span>info@klimatkomplect.com.ua</span>
-                                    <span>email_2@gmail.com</span>
+                                <div className="emails">
+                                    <i className="fas fa-at emailIcon"/>
+                                    <div className="numbers">
+                                        <span>info@klimatkomplect.com.ua</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="location">
-                                <i className="fas fa-map-marker-alt locationIcon"/>
-                                <div className="numbers">
-                                    <span>Вулиця будинок 20</span>
-                                    <span>Місто</span>
-                                    <span>Країна</span>
+                                <div className="location">
+                                    <i className="fas fa-map-marker-alt locationIcon"/>
+                                    <div className="numbers">
+                                        <span>Межигірськая 82а</span>
+                                        <span>Київ</span>
+                                        <span>Україна</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col supportContainer">
                             <div className="arrow"></div>
+                            <div style={{float:"left", maxWidth:"1083"}}>
                             <div className="contact">ЗВОРОТНІЙ ЗВ'ЯЗОК</div>
                             <div className="nameInputGroup row d-flex">
                                 <div className="nameInputIcon d-flex align-items-center">
@@ -138,6 +142,7 @@ class Support extends Component {
                                 <i className="fas fa-arrow-right"/>
                             </div>
                             {console.log(this.state.form)}
+                        </div>
                         </div>
                     </div>
                     <div className="doct container_wrap">

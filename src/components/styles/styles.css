@@ -19,9 +19,15 @@ ul{
         max-width: 100%!important;
     }
     .slider{
+        background: url("../images/background1 (2).png")!important;
         background-size: auto;
         background-position-x: center;
     }
+
+    .support .numbers{
+        font-size: 19px!important;
+    }
+
     .newsBlock_1{
         margin: 10px 0!important;
     }
@@ -165,6 +171,10 @@ ul{
     padding: 0;
     display: flex;
     justify-content: flex-start;
+}
+
+.graf_1{
+    padding-top: 80px;
 }
 
 .img_us{

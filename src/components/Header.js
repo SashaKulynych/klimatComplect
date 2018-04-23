@@ -356,7 +356,7 @@ class Header extends Component {
                             <ul id="6" className="collapse hide_phone">
                                 <li><span>  +38 (066) 279 10 90</span></li>
                                 <li><span>  +38 (068) 279 10 90</span></li>
-                                <li><span>  +38 (068) 279 10 90</span></li>
+                                <li><span>  +38 (093) 279 10 90</span></li>
                             </ul>
                             <div className="text email">info@klimatkomplect.com.ua</div>
                             {this.props.userInfo===null?
