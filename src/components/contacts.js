@@ -73,10 +73,11 @@ class Contacts extends Component {
                             <div className="phones">
                                 <i className="fas fa-phone-volume phoneIcon"/>
                                 <div className="numbers">
-                                    <span>+38 (044) 379 10 90</span>
+                                    <span>+38 (044) 379 10 90 Київ</span>
                                     <span>+38 (066) 279 10 90</span>
                                     <span>+38 (068) 279 10 90</span>
                                     <span>+38 (093) 279 10 90</span>
+                                    <span>+38 (057) 732 01 33 Харків</span>
                                 </div>
                             </div>
                             <div className="emails">
