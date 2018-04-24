@@ -277,7 +277,7 @@ ul{
 
 .potd{
     display: flex!important;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .categoryView_1 ul{

@@ -401,19 +401,19 @@ class Header extends Component {
                                         <li onClick={()=>this.props.history.push('/about')}><span>Про компанію</span></li>
                                         <li onClick={()=>this.props.history.push('/reference')}><span>Референс</span></li>
                                         <li onClick={()=>this.props.history.push('/service')}><span>Сервіс</span></li>
-                                        <li onClick={()=>this.props.history.push('/Docm')}><span>Тех. документація</span></li>
                                     </ul>
 
                                     <span data-toggle="collapse" data-target="#2">КАТЕГОРІЇ &#8595;</span>
                                     <ul id="2" className="collapse">
                                         {manufacts}
                                     </ul>
-                                    <span onClick={()=>this.props.history.push('/contacts')}>КОНТАКТИ</span>
-                                    <span data-toggle="collapse" data-target="#4">ПІДТРИМКА &#8595;</span>
-                                    <ul  id="4" className="collapse">
+                                    <span  data-toggle="collapse" data-target="#3">КОНТАКТИ &#8595;</span>
+                                    <ul  id="3" className="collapse">
+                                        <p style={{paddingLeft:25, color:"gray"}}>ПІДТРИМКА</p>
                                         <li onClick={()=>this.props.history.push('/video')}><span>Відеокурс</span></li>
-                                        <li onClick={()=>this.props.history.push('/support')}><span>Зв'язок</span></li>
+                                        <li  onClick={()=>this.props.history.push('/contacts')}><span>Зв'язок</span></li>
                                     </ul>
+                                    <span onClick={()=>this.props.history.push('/Docm')}>ТЕХНІЧНА ДОКУМЕНТАЦІЯ</span>
                                 </div>
                             </div>
                         </nav>
@@ -430,7 +430,6 @@ class Header extends Component {
                                                     <li onClick={()=>this.props.history.push('/about')}><span>Про компанію</span></li>
                                                     <li onClick={()=>this.props.history.push('/reference')}><span>Референс</span></li>
                                                     <li onClick={()=>this.props.history.push('/service')}><span>Сервіс</span></li>
-                                                    <li onClick={()=>this.props.history.push('/Docm')}><span>Тех. документація</span></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -457,17 +456,18 @@ class Header extends Component {
                             <div className="col menu-right-part d-flex justify-content-end">
                                 <ul>
                                     <li>
-                                        <span  style={{paddingRight:"40px"}} onClick={()=>this.props.history.push('/contacts')} >КОНТАКТИ</span>
+                                        <span data-toggle="collapse" data-target="#3"  style={{paddingRight:"40px"}} onClick={()=>this.props.history.push('/contacts')} >КОНТАКТИ</span>
 
+                                        <ul style={{marginLeft:"30px"}} id="3" className="collapse">
+                                            <p style={{textAlign:"center", color:"grey"}}>ПІДТРИМКА</p>
+                                            <li onClick={()=>this.props.history.push('/video')}><span className="potd">Відеокурс</span></li>
+                                            <li onClick={()=>this.props.history.push('/support')}><span className="potd">Зв'язок</span></li>
+                                        </ul>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <span data-toggle="collapse" data-target="#4">ПІДТРИМКА</span>
-                                        <ul  id="4" className="collapse">
-                                            <li onClick={()=>this.props.history.push('/video')}><span className="potd">Відеокурс</span></li>
-                                            <li onClick={()=>this.props.history.push('/support')}><span className="potd">Зв'язок</span></li>
-                                        </ul>
+                                        <span onClick={()=>this.props.history.push('/Docm')} style={{paddingBottom:0, paddingTop:16}} className="text-center">ТЕХНІЧНА<br />ДОКУМЕНТАЦІЯ</span>
                                     </li>
                                 </ul>
                             </div>

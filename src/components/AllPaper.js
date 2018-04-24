@@ -36,7 +36,7 @@ class AllPaper extends Component {
                         <div className="pictureTitle"></div>
                     </div>
                     <div onClick={()=>this.props.history.push('/Paper/'+ value.id)} className="newsTitle d-flex justify-content-center">{title}</div>
-                    <div   className="newsDescription">
+                    <div  style={{height:90}}   className="newsDescription">
                         {value.text}
                     </div>
                     <div className="text-center">

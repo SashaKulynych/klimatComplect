@@ -45,7 +45,7 @@ class Paper extends Component {
                     <div   className="newsDescription col-md-10 col-sm-12 container_wrap" style={{color:"#000",padding:"20px 30px 0 30px" ,fontSize:24, textAlign:"justify"}}>
                         {this.state.News.text}
                     </div>
-                </div>}
+                </div>
                 {console.log(this.state)}
                 <Footer/>
             </div>
