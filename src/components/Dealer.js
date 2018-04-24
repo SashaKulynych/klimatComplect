@@ -68,7 +68,8 @@ class Dealer extends Component {
                         <img className="afterHeaderPicture" src={require('./images/dealer.png')} alt=""/>
                     </div>
                     <div className="d-flex row container_wrap">
-                        <div className="col-sm-12 col-lg-9 categoryView">
+                        <p className="col-12 title mt-2 text-center">Корзина</p>
+                        <div className="col-sm-12 col-lg-12 categoryView">
                             <table className="col-12 ">
                                 <tr className="col-1">
                                     <th>№</th>

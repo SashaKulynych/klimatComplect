@@ -195,7 +195,7 @@ class Item extends Component {
                             <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="url(#colorPv)"/>
                         </AreaChart>
                     </div>
-                    <div className="col-sm-12 col-lg-9 categoryView">
+                    <div className="col-sm-12 col-lg-12 categoryView">
                         <table className="col-12 ">
                             <tr className="col-1">
                                 <th>№</th>
