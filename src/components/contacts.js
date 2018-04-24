@@ -140,7 +140,6 @@ class Contacts extends Component {
                                 <span style={{margin:"auto"}} onClick={()=>{this.form()}}>ВІДПРАВИТИ ПОВІДОЛЕННЯ</span>
                                 <i className="fas fa-arrow-right"/>
                             </div>
-                            {console.log(this.state.form)}
                         </div>
                         </div>
                     </div>

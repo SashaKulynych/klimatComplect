@@ -45,7 +45,7 @@ class News extends Component {
                     <div   className="newsDescription container_wrap col-md-10 col-sm-12 " style={{color:"#000", fontSize:24, padding:"20px 30px 0 30px", textAlign:"justify"}}>
                         {this.state.News.text}
                     </div>
-                </div>}
+                </div>
                 {console.log(this.state)}
                 <Footer/>
             </div>
