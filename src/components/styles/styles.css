@@ -365,6 +365,7 @@ ul{
     font-size: 30px;
     font-family: "Open Sans";
     margin-bottom: 20px;
+    transition: box-shadow 0.5s ease-in-out;
 }
 .aboutButton:hover{
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -422,6 +423,7 @@ cursor: pointer;
     font-family: "Open Sans";
     color: #282828;
     cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out;
 }
 .allNews_1{
         background-color: #fddb1d;
@@ -430,7 +432,14 @@ cursor: pointer;
         color: #282828;
         border: none;
         cursor: pointer;
+        transition: box-shadow 0.5s ease-in-out;
 }
+
+.allNews_1:hover{
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
 .title{
     margin-top: 100px;
     font-size: 32px;
