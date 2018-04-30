@@ -33,7 +33,7 @@
 .headerCircles{
     display: flex;
     align-items: center;
-    height:55px;
+    height:49px;
     /*margin:0;*/
     padding: 0px 55px;
 }
@@ -94,8 +94,8 @@
     cursor: pointer;
     border-radius: 50px;
     background-color: white;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     margin: 10px 8px;
     display: flex;
     align-items: center;
@@ -105,7 +105,7 @@
 }
 .header .text{
     color:white;
-    font-size: 21px;
+    font-size: 15px;
     font-family: Open Sans;
 }
 
@@ -117,17 +117,17 @@
 
 .hide_phone{
     position: absolute;
-    left: 374px;
+    left: 534px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 56px;
+    margin-top: 49px;
     z-index: 100;
-    width: 220px;
+    width: 150px;
     text-align: center;
     background: #323232;
     color: white;
     font-family: "Open Sans";
-    font-size: 21px;
+    font-size: 15px;
 
 }
 
@@ -138,7 +138,7 @@
 
 .header .phone{
     cursor: pointer;
-    padding-top: 15px;
+    padding-top: 16px;
 }
 
 .header .phone:hover .phone_1{
@@ -163,10 +163,10 @@
 
 .header .email{
     cursor: pointer;
-    margin:14px 25px;
+    margin:16px 25px;
 }
 .header .enter{
-    margin-top: 14px;
+    margin-top: 16px;
     cursor: pointer;
 }
 /*dropdown menu left part*/
@@ -428,21 +428,22 @@
 }
 .header .logoTextRight{
     position: absolute;
-    bottom: 0px;
-    margin-left: 140px;
+    bottom: 35px;
+    color: #d3731c;
+    margin-left: 97px;
 }
 .header .logoTextLeft{
     position: absolute;
-    bottom: 0px;
-    margin-left: -125px;
+    bottom: 35px;
+    color: #d3731c;
+    margin-left: -84px;
 }
 .header .logoImage{
     cursor: pointer;
     position: absolute;
     z-index: 60;
     transition:all 0.9s ease;
-    width: 175px;
-    top:-5px
+    width: 95px;
 }
 .header .consent{
     margin-top: 20px;

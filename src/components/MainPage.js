@@ -85,232 +85,136 @@ class MainPage extends Component {
         })
         return (
             <div>
+                <div style={{position:"absolute", zIndex:100, width:"100%", background:"#fff"}}>
                 <Header/>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div id="carouselExampleIndicators" className="carousel slide slider container-fluid" >
-                            <ol className="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"> </li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
-                            </ol>
-                            <div className="carousel-inner container_wrap">
-                                <div className="carousel-item active row">
-                                <div className="textInSlider col-lg-6 col-sm-12 text-justify">
+                </div>
+                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                    <ol className="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div className="carousel-inner" role="listbox">
+                        <div className="carousel-item active  slider" >
+                            <div className="container_wrap " style={{paddingTop:150}}>
+                            <div className="carousel-caption d-md-block slid">
+                                <div className="row">
+                                <div className="textInSlider col-lg-5 col-sm-12 text-justify">
                                     Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
                                     <br/><br/>
                                     Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.
                                     <br/><br/>
                                     Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.
                                 </div>
-                                    <div className="graf_1">
-                                        <div className="text-center">
-                                            <AreaChart  className="col-12 row"  width={525} height={350} data={this.state.data}>
-                                                <defs >
-                                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <XAxis dataKey="name" stroke="#212121"/>
-                                                <YAxis stroke="#212121"/>
-                                                <Tooltip/>
-                                                <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
-                                                <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
-                                            </AreaChart>
-                                        </div>
-                                    </div>
-                                    <div className="graf_2 text-center mt-5 col-lg-6 col-sm-12">
-                                        <div>
-                                            <AreaChart style={{margin:"auto"}} className="row"  width={300} height={350} data={this.state.data}>
-                                                <defs >
-                                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <XAxis dataKey="name" stroke="#212121"/>
-                                                <YAxis stroke="#212121"/>
-                                                <Tooltip/>
-                                                <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
-                                                <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
-                                            </AreaChart>
-                                        </div>
-                                    </div>
-                            </div>
-                                <div className="carousel-item row">
-                                    <div className="textInSlider col-lg-6 col-sm-12 text-justify">
-                                        Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
-                                        <br/><br/>
-                                        Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.
-                                        <br/><br/>
-                                        Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.
-                                    </div>
-                                    <div className="graf_1">
-                                        <div className="text-center">
-                                            <AreaChart  className="col-12 row"  width={525} height={350} data={this.state.data}>
-                                                <defs >
-                                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <XAxis dataKey="name" stroke="#212121"/>
-                                                <YAxis stroke="#212121"/>
-                                                <Tooltip/>
-                                                <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
-                                                <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
-                                            </AreaChart>
-                                        </div>
-                                    </div>
-                                    <div className="graf_2 text-center mt-5 col-lg-6 col-sm-12">
-                                        <div>
-                                            <AreaChart style={{margin:"auto"}} className="row"  width={300} height={350} data={this.state.data}>
-                                                <defs >
-                                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <XAxis dataKey="name" stroke="#212121"/>
-                                                <YAxis stroke="#212121"/>
-                                                <Tooltip/>
-                                                <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
-                                                <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
-                                            </AreaChart>
-                                        </div>
+                                <div className="graf_1 col-6">
+                                    <div className="text-center">
+                                        <AreaChart  className="col-12 row"  width={525} height={350} data={this.state.data}>
+                                            <defs >
+                                                <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
+                                                    <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
+                                                </linearGradient>
+                                                <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
+                                                    <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
+                                                </linearGradient>
+                                            </defs>
+                                            <XAxis dataKey="name" stroke="#212121"/>
+                                            <YAxis stroke="#212121"/>
+                                            <Tooltip/>
+                                            <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
+                                            <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
+                                        </AreaChart>
                                     </div>
                                 </div>
-                                <div className="carousel-item row">
-                                    <div className="textInSlider col-lg-6 col-sm-12 text-justify">
-                                        Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
-                                        <br/><br/>
-                                        Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.
-                                        <br/><br/>
-                                        Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.
-                                    </div>
-                                    <div className="graf_1">
-                                        <div className="text-center">
-                                            <AreaChart  className="col-12 row"  width={525} height={350} data={this.state.data}>
-                                                <defs >
-                                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <XAxis dataKey="name" stroke="#212121"/>
-                                                <YAxis stroke="#212121"/>
-                                                <Tooltip/>
-                                                <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
-                                                <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
-                                            </AreaChart>
-                                        </div>
-                                    </div>
-                                    <div className="graf_2 text-center mt-5 col-lg-6 col-sm-12">
-                                        <div>
-                                            <AreaChart style={{margin:"auto"}} className="row"  width={300} height={350} data={this.state.data}>
-                                                <defs >
-                                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                                        <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <XAxis dataKey="name" stroke="#212121"/>
-                                                <YAxis stroke="#212121"/>
-                                                <Tooltip/>
-                                                <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
-                                                <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
-                                            </AreaChart>
-                                        </div>
-                                    </div>
                                 </div>
+                                <div className='icon-scroll'></div>
                             </div>
-                            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"> </span>
-                                <span className="sr-only">Previous</span>
-                            </a>
-                            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"> </span>
-                                <span className="sr-only">Next</span>
-                            </a>
+                            </div>
                         </div>
-                        {/*<div className="slider">*/}
-                            {/*<Slider className="mainPageSlider col-12" {...settings}>*/}
-                                {/*<div className="d-flex flex-row  ">*/}
-                                    {/*<div className="row d-flex flex-row">*/}
-                                        {/*<div className="col-md-6 d-flex justify-content-end">*/}
-                                            {/*<div className="textInSlider">*/}
-                                                {/*Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?*/}
-                                                {/*<br/><br/>*/}
-                                                {/*Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.*/}
-                                                {/*<br/><br/>*/}
-                                                {/*Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="col-md-6 d-flex justify-content-center">*/}
-                                            {/*<img style={{height:"320px"}} src={require('./images/graph.png')} alt="Graph"/>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                {/*</div>*/}
-                                {/*<div className="d-flex flex-row col-12 ">*/}
-                                    {/*<div className="row d-flex flex-row">*/}
-                                        {/*<div className="col-md-6 d-flex justify-content-end" style={{minHeight:300, minWidth: 600}}>*/}
-                                            {/*<div className="textInSlider">*/}
-                                                {/*Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?*/}
-                                                {/*<br/><br/>*/}
-                                                {/*Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.*/}
-                                                {/*<br/><br/>*/}
-                                                {/*Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="col-md-6 d-flex justify-content-center" style={{minHeight: 300, minWidth: 600}}>*/}
-                                            {/*<img style={{height:320}} src={require('./images/graph.png')} alt="Graph"/>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                {/*</div>*/}
-                                {/*<div className="d-flex flex-row  col-12">*/}
-                                    {/*<div className="row d-flex flex-row">*/}
-                                        {/*<div className="col-md-6 d-flex justify-content-end" style={{minHeight:300, minWidth: 600}}>*/}
-                                            {/*<div className="textInSlider">*/}
-                                                {/*Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?*/}
-                                                {/*<br/><br/>*/}
-                                                {/*Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.*/}
-                                                {/*<br/><br/>*/}
-                                                {/*Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.*/}
-                                            {/*</div>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="col-md-6 d-flex justify-content-center" style={{minHeight: 300, minWidth: 600}}>*/}
-                                            {/*<img style={{height:320}} src={require('./images/graph.png')} alt="Graph"/>*/}
-                                        {/*</div>*/}
-                                    {/*</div>*/}
-                                {/*</div>*/}
-                            {/*</Slider>*/}
-                        {/*</div>*/}
+                        <div className="carousel-item  slider" >
+                            <div className="container_wrap " style={{paddingTop:150}}>
+                                <div className="carousel-caption d-md-block slid">
+                                    <div className="row">
+                                        <div className="textInSlider col-lg-5 col-sm-12 text-justify">
+                                            Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
+                                            <br/><br/>
+                                            Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.
+                                            <br/><br/>
+                                            Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.
+                                        </div>
+                                        <div className="graf_1 col-6">
+                                            <div className="text-center">
+                                                <AreaChart  className="col-12 row"  width={525} height={350} data={this.state.data}>
+                                                    <defs >
+                                                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
+                                                            <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
+                                                        </linearGradient>
+                                                        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
+                                                            <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <XAxis dataKey="name" stroke="#212121"/>
+                                                    <YAxis stroke="#212121"/>
+                                                    <Tooltip/>
+                                                    <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
+                                                    <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
+                                                </AreaChart>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='icon-scroll'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="carousel-item  slider" >
+                            <div className="container_wrap " style={{paddingTop:150}}>
+                                <div className="carousel-caption d-md-block slid">
+                                    <div className="row">
+                                        <div className="textInSlider col-lg-5 col-sm-12 text-justify">
+                                            Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
+                                            <br/><br/>
+                                            Не має значення, Ви прийшли за простим вентилятором, чи цілою кліматизаційною установкою – пошук буде простим і приємним.
+                                            <br/><br/>
+                                            Наш розумний  airob (airbot/smartic)  вже готовий швидко та точно підібрати і запропонувати Вам оптимальний клімат-комплект для будь-якого приміщення та існуючих умов.
+                                        </div>
+                                        <div className="graf_1 col-6">
+                                            <div className="text-center">
+                                                <AreaChart  className="col-12 row"  width={525} height={350} data={this.state.data}>
+                                                    <defs >
+                                                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
+                                                            <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
+                                                        </linearGradient>
+                                                        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
+                                                            <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <XAxis dataKey="name" stroke="#212121"/>
+                                                    <YAxis stroke="#212121"/>
+                                                    <Tooltip/>
+                                                    <Area type="monotone" dataKey="total" stroke="#8884d8" fill="red"/>
+                                                    <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="yellow"/>
+                                                </AreaChart>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='icon-scroll'></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
                 </div>
                 <div className="container">
                     <div className="row d-flex justify-content-center">
@@ -319,26 +223,26 @@ class MainPage extends Component {
                 </div>
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-lg-6 col-sm-12  justify-content-center row">
-                            <div className="achievementBlock col-sm-12 col-lg-6">
-                                <div className="achievementBlockTitle">Збереження електроенергії</div>
+                        <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-between"}}>
+                            <div className="achievementBlock col-sm-12 col-lg-5">
+                                <div className="achievementBlockTitle toptitle">Збереження електроенергії</div>
                                 <img className="achievementBlockImage" src={require("./images/roket.png")} alt="roket"/>
                                     <div className="achievementBlockTitle">Вистачить для запуску ракети</div>
                             </div>
-                            <div className="achievementBlock col-sm-12 col-lg-6">
-                                <div className="achievementBlockTitle">Наші вентилятори заробляють біткоїни</div>
+                            <div className="achievementBlock col-sm-12 col-lg-5">
+                                <div className="achievementBlockTitle toptitle">Наші вентилятори заробляють біткоїни</div>
                                 <img className="achievementBlockImage" src={require("./images/bitcoin.png")} alt="bitcoin"/>
                                 <div className="achievementBlockTitle">Їх встановлюють для охолодження біткоїн ферм</div>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-sm-12 row  justify-content-center">
-                            <div className="achievementBlock col-sm-12 col-lg-6">
-                                <div className="achievementBlockTitle">Найбільший вентилятор у зібраному стані</div>
+                        <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-between"}}>
+                            <div className="achievementBlock col-sm-12 col-lg-5">
+                                <div className="achievementBlockTitle toptitle">Найбільший вентилятор у зібраному стані</div>
                                 <img className="achievementBlockImage" src={require("./images/vandamm.png")} alt="vandamm"/>
                                     <div className="achievementBlockTitle">Займав цілий грузовий автомобіль</div>
                             </div>
-                            <div className="achievementBlock col-sm-12 col-lg-6">
-                                <div className="achievementBlockTitle">Неймовірний Об‘єм очищеного повітря</div>
+                            <div className="achievementBlock col-sm-12 col-lg-5">
+                                <div className="achievementBlockTitle toptitle">Неймовірний Об‘єм очищеного повітря</div>
                                 <img className="achievementBlockImage" src={require("./images/air.png")} alt="air"/>
                                     <div className="achievementBlockTitle">Можна створити атмосферу на Місяці</div>
                             </div>

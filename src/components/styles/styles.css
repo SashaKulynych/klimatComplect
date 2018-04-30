@@ -3,26 +3,39 @@ ul{
     padding:0;
 }
 
+.slid{
+    position: relative!important;
+    left: 10% !important;
+    right: 0!important;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .container_wrap{
     max-width: 1366px;
     margin: auto!important;
 }
-.slider{
-    padding: 0;
-    width: 100%;
+.slider {
+    background-size: cover!important;
     background: url("../images/background.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 @media (max-width: 992px) {
     .container_wrap{
         max-width: 100%!important;
     }
-    .slider{
-        background: url("../images/background1 (2).png")!important;
-        background-size: auto;
-        background-position-x: center;
-    }
+    /*.slider{*/
+        /*background: url("../images/background1 (2).png")!important;*/
+        /*background-size: auto;*/
+        /*background-position-x: center;*/
+    /*}*/
 
     .support .numbers{
         font-size: 19px!important;
@@ -36,6 +49,11 @@ ul{
     /*}*/
     .phone{
         display: none;
+    }
+
+
+    .icon-scroll{
+        display: none!important;
     }
     .support .contactContainer{
         padding: 0!important;
@@ -134,7 +152,7 @@ ul{
     }
     .textInSlider{
         background: none!important;
-        padding-left: 50px!important;
+      width: 500px!important;
         margin: 0!important;
         font-size: 13px!important;
     }
@@ -174,9 +192,7 @@ ul{
     justify-content: flex-start;
 }
 
-.graf_1{
-    padding-top: 80px;
-}
+
 
 .img_us{
     height: 300px;
@@ -207,9 +223,9 @@ ul{
     text-align: left;
 }
 .textInSlider{
-    padding: 55px 30px 50px 80px;
     color: white;
-    font-size: 22px;
+    padding-right: 90px;
+    font-size: 20px;
     cursor: default;
 }
 .achievement{
@@ -219,16 +235,24 @@ ul{
     cursor: default;
 }
 .achievementBlock{
-    margin: 0!important;
-    padding:10px 25px;
+    margin: 0 20px 10px 0!important;
+    padding: 0;
+    border: 1px solid #ffca13;
+    border-radius: 10px 10px 0 0;
     text-align: center;
 }
 .achievementBlockTitle{
+
     font-family: "Open Sans";
     font-weight: 300;
     position: relative;
     z-index: 10;
     cursor: default;
+}
+
+.toptitle{
+    background: #ffcc1a;
+    border-radius: 10px 10px 0 0;
 }
 
 .title_docm{
@@ -531,4 +555,54 @@ cursor: pointer;
 .slick-dots li.slick-active button:before {
     opacity: .75;
     color: #fff;
+}
+
+
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 40%;
+}
+.icon-scroll {
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    top:90%;
+    margin-top: -10px;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 25px;
+}
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    top: 8px;
+    border-radius: 4px;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px);
+    }
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px);
+    }
 }
