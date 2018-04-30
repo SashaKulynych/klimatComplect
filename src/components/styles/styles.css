@@ -87,6 +87,7 @@ ul{
     }
 
     .title{
+        font-size: 20px!important;
         margin-top: 10px!important;
     }
 
@@ -277,7 +278,7 @@ ul{
 
 .potd{
     display: flex!important;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .categoryView_1 ul{

@@ -55,7 +55,7 @@ class MainPage extends Component {
                 <div className="col newsBlock"  onClick={()=>this.props.history.push('/News/'+ value.id)}>
                     <div className="newsPicture d-flex justify-content-center align-items-center"
                          style={img}>
-                        <div className="pictureTitle"></div>
+                        <div className="pictureTitle"> </div>
                     </div>
                     <div className="newsTitle d-flex justify-content-center">{title}</div>
                     <div className="newsDescription" style={{height:90}}>
@@ -74,7 +74,7 @@ class MainPage extends Component {
                 <div className="col newsBlock"  onClick={()=>this.props.history.push('/Paper/'+ value.id)}>
                     <div className="newsPicture d-flex justify-content-center align-items-center"
                          style={img}>
-                        <div className="pictureTitle"></div>
+                        <div className="pictureTitle"> </div>
                     </div>
                     <div className="newsTitle d-flex justify-content-center">{title}</div>
                     <div className="newsDescription" style={{height:90}}>
@@ -88,11 +88,11 @@ class MainPage extends Component {
                 <Header/>
                 <div className="container-fluid">
                     <div className="row">
-                        <div id="carouselExampleIndicators" class="carousel slide slider container-fluid" >
+                        <div id="carouselExampleIndicators" className="carousel slide slider container-fluid" >
                             <ol className="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"> </li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
                             </ol>
                             <div className="carousel-inner container_wrap">
                                 <div className="carousel-item active row">
@@ -146,7 +146,7 @@ class MainPage extends Component {
                                         </div>
                                     </div>
                             </div>
-                                <div class="carousel-item row">
+                                <div className="carousel-item row">
                                     <div className="textInSlider col-lg-6 col-sm-12 text-justify">
                                         Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
                                         <br/><br/>
@@ -197,7 +197,7 @@ class MainPage extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item row">
+                                <div className="carousel-item row">
                                     <div className="textInSlider col-lg-6 col-sm-12 text-justify">
                                         Якщо  Ви на цьому сайті , то Ви шукаєте свіже повітря! Або ж цікавлять певні особливі кліматичні умови?
                                         <br/><br/>
@@ -352,7 +352,7 @@ class MainPage extends Component {
                     </div>
                     <div className="row">
                         <div className="col d-flex justify-content-center">
-                            <span className="play"><i class="far fa-play-circle"></i></span>
+                            <span className="play"><i className="far fa-play-circle"> </i></span>
                             <img className="img_us" src={require("./images/vent.png")} alt=""/>
                         </div>
                         <div className="col">

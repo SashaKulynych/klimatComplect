@@ -80,6 +80,8 @@ class Support extends Component {
                                         <span>+38 (068) 279 10 90</span>
                                         <span>+38 (093) 279 10 90</span>
                                         <span>+38 (057) 732 01 33 Харків</span>
+                                        <span>+38 (097) 127 23 42 Львів</span>
+                                        <span>+38 (067) 675 63 77 Івано-Франківськ</span>
                                     </div>
                                 </div>
                                 <div className="emails">

@@ -290,7 +290,7 @@
     position:absolute;
     z-index: 100;
     top:96%;
-    right:0;
+    right:-18px;
     background:#fff;
     padding-bottom:10px;
 }

@@ -8,7 +8,7 @@ import Notifications, {notify} from 'react-notify-toast';
 
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
+    import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
 import * as API from '../actions/api'
 
 
@@ -18,13 +18,13 @@ class Item extends Component {
         super(props)
         this.state={
             data : [
-                {name: '14.02.18', total: 8, paid: 7},
-                {name: '15.02.18', total: 9, paid: 9},
-                {name: '16.02.18', total: 8, paid: 5},
-                {name: '17.02.18', total: 9, paid: 6},
-                {name: '18.02.18', total: 10, paid: 8},
-                {name: '19.02.18', total: 10, paid: 10},
-                {name: '20.02.18', total: 9, paid: 3}
+                {name: 20, total: 8, lol:10},
+                {name: '15.02.18', total: 9, lol:10},
+                {name: '16.02.18', total: 8, lol:10},
+                {name: '17.02.18', total: 9, lol:10},
+                {name: '18.02.18', total: 10, lol:10},
+                {name: '19.02.18', total: 10, lol:10},
+                {name: '20.02.18', total: 9, lol:10}
             ],
             product:{
                 name:'',
@@ -35,37 +35,58 @@ class Item extends Component {
                 user_id:0,
                 model_id:0
             },
-            add:[]
+            add:[],
+            article:'',
+            dataa:[],
         }
     }
     async componentDidMount() {
+
         let userInfo = await JSON.parse(localStorage.getItem('userInfo'));
         await API.getProduct(this.props.match.params.id).then((value) => {
-            console.log('getProduct', value)
             this.setState({product: value})
         });
+
         await API.getModels(this.props.match.params.id).then((value) => {
             console.log('getModels', value)
             this.setState({model: value})
-            console.log("model", this.state.model)
         });
+
+        await this.state.model.map(value => {
+            if(value.article !== 0){
+                return (
+                    API.getArticle(value.article).then((response) => {
+                        this.setState({article:response})
+                    })
+                )
+            }else null
+        })
+
 
         if (userInfo !== null) {
             let shop = Object.assign({}, this.state.shop);
             shop.user_id = userInfo.id;
             this.setState({shop});
         }
+        API.getArticle_3().then((response) =>{
+            console.log(response)
+        })
         console.log(this.state)
     }
 
+
+    graf(dataa){
+        let  data = dataa !== ""?(
+            API.getArticle_2(dataa).then((response) => {
+                console.log("res", response.fiveDutyPoints)
+            })): null
+    }
     async shopId(id){
         let shop = await Object.assign({}, this.state.shop);
         shop.model_id = id;
         await this.setState({shop});
         try{
             await API.shopAdd(this.state.shop).then((response)=>{
-                console.log("status",response.status);
-                console.log("state", this.state.shop);
                 if(response.status === 204) throw new Error('Товару немає в наявності');
                 if(response.status !== 200 && response.status !==204) throw new Error('Проблема з відправкою');
                 else API.getShop();
@@ -115,8 +136,9 @@ class Item extends Component {
         });
         return (
             <div>
+                {console.log("2",this.state.article)}
+                {this.graf(this.state.article)}
                 <Header/>
-                {console.log(this.state.shop)}
                 <div className="item container_wrap">
                     <div className="row itemContainer">
                         <div className="col-sm-12 col-lg-6">
@@ -140,7 +162,6 @@ class Item extends Component {
                             <div className="description">
                                 {this.state.product.desc}
                             </div>
-                            {console.log("", this.state.product)}
                             <div className="row">
                                 <div className="rightButtonStyle col-sm-12">
                                     <span>Опис</span>
@@ -172,7 +193,7 @@ class Item extends Component {
                             <YAxis stroke="#212121"/>
                             <Tooltip/>
                             <Area type="monotone" dataKey="total" stroke="#8884d8" fill="url(#colorUv)"/>
-                            <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="url(#colorPv)"/>
+                            <Area type="monotone" dataKey="lol" stroke="#82ca9d" fill="url(#colorPv)"/>
                         </AreaChart>
                     </div>
 
@@ -192,7 +213,7 @@ class Item extends Component {
                             <YAxis stroke="#212121"/>
                             <Tooltip/>
                             <Area type="monotone" dataKey="total" stroke="#8884d8" fill="url(#colorUv)"/>
-                            <Area type="monotone" dataKey="paid" stroke="#82ca9d" fill="url(#colorPv)"/>
+                            <Area type="monotone" dataKey="lol" stroke="#82ca9d" fill="url(#colorPv)"/>
                         </AreaChart>
                     </div>
                     <div className="col-sm-12 col-lg-12 categoryView">

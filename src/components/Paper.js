@@ -28,7 +28,7 @@ class Paper extends Component {
     }
 
     render() {
-        let img = this.state.News.img===''?{backgroundImage: `url(${require('./images/newsPicture1.png')}`}:
+        let img = this.state.News.img!==''?{backgroundImage: `url(${require('./images/newsPicture1.png')}`}:
             {backgroundImage: "url(http://admin.klimatkomplect.com.ua/image/news/"+this.state.News.img+")"};
         return (
             <div>

@@ -12,6 +12,10 @@ import Loader from 'react-loader-spinner'
 // import * as API from '../actions/api'
 
 
+
+
+
+
 class Docm extends Component {
     constructor(props){
         super(props)
@@ -56,6 +60,7 @@ class Docm extends Component {
             )
         })
 
+
         let categories = this.state.categories.map((value,i)=>{
             if(this.state.tab===value.manufact_id){
                 let array = []
@@ -75,7 +80,7 @@ class Docm extends Component {
                             return(
                                 <div key={index} style={{marginLeft:20, marginRight:20}}>
                                     <a style={{paddingRight:10}} href={host+"api/get-techdata?name="+val.name}>
-                                        <li key={index} style={{width:200,height:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
+                                        <li key={index} style={{width:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
                                             <div className="itemTop">
                                                 {val.name}
                                             </div>
@@ -105,7 +110,7 @@ class Docm extends Component {
                 <div className="title_docm">
                     ТЕХНІЧНА ДОКУМЕНТАЦІЯ
                 </div>
-                {
+                   {
                     this.state.loading?<div style={{textAlign:"center", padding:20}}><Loader
                         type="TailSpin"
                         color="yellow"
@@ -117,7 +122,9 @@ class Docm extends Component {
                             <div className="row col-12 container_wrap">
                                 {manufacts}
                             </div>
-                            {categories}
+                            <div>
+                                {categories}
+                            </div>
                         </div>
                 }
                 </div>

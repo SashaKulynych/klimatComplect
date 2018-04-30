@@ -352,7 +352,7 @@ class Header extends Component {
                         <div className="row col headerRightPart">
                             {/*<div className="text phone">+380443791090 </div>*/}
                             {/*<span className="phone_1">+380662791090 +380682791090 +380932791090</span>*/}
-                            <span data-toggle="collapse" className="text phone" data-target="#6"><i class="fas fa-arrow-down"></i>   +38 (044) 379 10 90</span>
+                            <span data-toggle="collapse" className="text phone" data-target="#6"><i className="fas fa-arrow-down"> </i>   +38 (044) 379 10 90</span>
                             <ul id="6" className="collapse hide_phone">
                                 <li><span>  +38 (066) 279 10 90</span></li>
                                 <li><span>  +38 (068) 279 10 90</span></li>
@@ -368,10 +368,12 @@ class Header extends Component {
                                 </div>:
                                 <div className="row" >
                                     <div onClick={()=>this.props.history.push('/dealer')} className="circle">
+                                        { this.state.count == null?(
                                         <div className="shop_numb">
                                             {this.state.count.map(value => value.count)}
-                                        </div>
-                                        <i  class="fas fa-shopping-cart"/>
+                                        </div>):null
+                                        }
+                                        <i  className="fas fa-shopping-cart"/>
                                     </div>
                                     <div onClick={()=>this.logOut()} className="circle"  style={{backgroundColor:"#fe9228"}}>
                                         <i className="fas fa-user"/>
@@ -386,7 +388,7 @@ class Header extends Component {
                     <div className="hideMenu">
                         <nav className="navbar navbar-toggleable-md navbar-light bg-faded hideMainMenu">
                             <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
+                                <span className="navbar-toggler-icon"> </span>
                             </button>
                             <div className="row" data-toggle="collapse" data-target="#navbarNavAltMarkup">
                                 <img className="hideMenuLogo"
@@ -410,7 +412,6 @@ class Header extends Component {
                                     <span  data-toggle="collapse" data-target="#3">КОНТАКТИ &#8595;</span>
                                     <ul  id="3" className="collapse">
                                         <p style={{paddingLeft:25, color:"gray"}}>ПІДТРИМКА</p>
-                                        <li onClick={()=>this.props.history.push('/video')}><span>Відеокурс</span></li>
                                         <li  onClick={()=>this.props.history.push('/contacts')}><span>Зв'язок</span></li>
                                     </ul>
                                     <span onClick={()=>this.props.history.push('/Docm')}>ТЕХНІЧНА ДОКУМЕНТАЦІЯ</span>
@@ -460,7 +461,6 @@ class Header extends Component {
 
                                         <ul style={{marginLeft:"30px"}} id="3" className="collapse">
                                             <p style={{textAlign:"center", color:"grey"}}>ПІДТРИМКА</p>
-                                            <li onClick={()=>this.props.history.push('/video')}><span className="potd">Відеокурс</span></li>
                                             <li onClick={()=>this.props.history.push('/support')}><span className="potd">Зв'язок</span></li>
                                         </ul>
                                     </li>

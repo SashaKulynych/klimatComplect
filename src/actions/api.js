@@ -12,6 +12,7 @@ export async function login(login) {
     })
 }
 
+
 export async function register(registration) {
     let formData = new FormData();
     for(let i in registration)
@@ -26,17 +27,35 @@ export async function getNews() {
         method: 'GET',
     }).then((response)=>response.json())
 }
-export async function getNewsPage() {
-    return await fetch(host+'api/get-news?all=1', {
+export async function getArticle(article) {
+    return await fetch("http://www.ruck.eu/backend/rest/products/fpn/"+article+"?frequency=50&api_key=public", {
+        method: 'GET',
+        headers: {
+            'Accept': 'text/plain;charset=utf-8',
+            'Content-Type': 'text/plain;charset=utf-8',
+        }
+    }).then((response)=>response.text())
+}
+
+
+export async function getArticle_2(response) {
+    return await fetch("http://www.ruck.eu/backend/rest/calculations/standarddata?partNumber="+response+"&curveType=0&etaDistance=70&curvePoints=50&language=de&api_key=public", {
         method: 'GET',
     }).then((response)=>response.json())
 }
 
-export async function getAllPaper() {
-    return await fetch(host+'api/?all_papers=1', {
+export async function getArticle_3() {
+    return await fetch("http://www.ruck.eu//backend/rest/calculations/dutydata?partNumber=132861_50_230_0_Us&qV=2&psF=528&FunctionType=0&FunctionPoints=50&api_key=public", {
         method: 'GET',
     }).then((response)=>response.json())
 }
+
+//
+// export async function getAllPaper() {
+//     return await fetch(host+'api/?all_papers=1', {
+//         method: 'GET',
+//     }).then((response)=>response.json())
+// }
 
 export async function getProduct(id) {
     return await fetch(host+'api/get-product/'+id, {
