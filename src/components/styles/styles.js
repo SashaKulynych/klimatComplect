@@ -9,7 +9,9 @@ export const styles = StyleSheet.create({
         cursor:"pointer",
         justifyContent:"center",
         ':nth-child(1n) > p':{
-            padding:"25px 50px 0 50px",
+            marginTop:5,
+            marginBottom:0,
+            padding:"3px 50px 0 50px",
             fontSize:"30px",
             fontFamily:"Arial",
         }
@@ -19,11 +21,12 @@ export const styles = StyleSheet.create({
         cursor:"pointer",
         justifyContent:"center",
         ':nth-child(1n) > p':{
-            padding:"25px 50px 0px 50px",
+            padding:"3px 50px 0px 50px",
             background:"#4b9bff",
             fontSize:"30px",
             color:"white",
-            margin:0,
+            marginTop:5,
+            marginBottom:0,
             fontFamily:"Arial",
         }
     }

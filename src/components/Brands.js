@@ -36,20 +36,20 @@ class brands extends Component {
                     </div>
                             </div>
                             <div>
-                                <div className="row col-12 container_wrap">
-                                    <div onClick={()=> this.setState({tab:1})} className={`col-lg-6 col-sm-12 ${this.state.tab===1?css(styles.li_docm_1):css(styles.li_docm)}`}> <p><img style={{width:"100px"}}  src={require('./images/ruck.png')}  /></p></div>
-                                    <div onClick={()=> this.setState({tab:0})} className={`col-lg-6 col-sm-12 ${this.state.tab===0?css(styles.li_docm_1):css(styles.li_docm)}`}>    <p><img style={{width:"100px"}}  src={require('./images/Logo_Sodeca_black.png')}  /></p></div>
+                                <div className="row col-12 container_wrap brand" style={{height:60}}>
+                                    <div onClick={()=> this.setState({tab:1})} className={`col-lg-6 col-sm-12 ${this.state.tab===1?css(styles.li_docm_1):css(styles.li_docm)}`}> <p><img style={{width:"85px"}}  src={require('./images/ruck.png')}  /></p></div>
+                                    <div onClick={()=> this.setState({tab:0})} className={`col-lg-6 col-sm-12 ${this.state.tab===0?css(styles.li_docm_1):css(styles.li_docm)}`}>    <p><img style={{width:"85px"}}  src={require('./images/Logo_Sodeca_black.png')}  /></p></div>
                                 </div>
                                 <div>
                                     <div>
                                         <div className="docm_div_1">
-                                            {this.state.tab === 1?(<span><img style={{width:"100px"}}  src={require('./images/ruck.png')}  /></span>):(<span><img style={{width:"100px"}}  src={require('./images/Logo_Sodeca_black.png')}  /></span>)}
+
                                         </div>
                                         {this.state.tab === 1?(
                                                 <div>
-                                                    <div className="container_wrap container" style={{margin:0,paddingLeft:20, position:"relative", zIndex:100, paddingTop:100}}>
+                                                    <div className="container_wrap container" style={{margin:0,paddingLeft:20, position:"relative", zIndex:100, paddingTop:15}}>
                                                         <h5 style={{fontFamily:"Open Sans", textAlign:"center"}} >
-                                                                <p className="text-center" style={{fontSize:30, color:"#fff"}}>Завод Ruck</p>
+                                                                <p className="text-center" style={{fontSize:20, color:"#fff", paddingBottom:25}}>Завод Ruck</p>
                                                                 Компанії Ruck Ventilatoren 25 років
                                                                 <br />
                                                                 <br />
@@ -72,7 +72,7 @@ class brands extends Component {
                                                             <img style={{height:350}}  className="col-lg-6 col-sm-12" src={require('./images/RUCK/IMG_4544.JPG')}  />
                                                         </div>
                                                         <div className="col-12 mt-3" style={{display:"flex", justifyContent:"center"}}>
-                                                            <span className="text-center">
+                                                            <span className="text-center brand_video">
                                                                     <YouTube
                                                                     videoId="o0DduApDpCI"
                                                                     opts={opts}
