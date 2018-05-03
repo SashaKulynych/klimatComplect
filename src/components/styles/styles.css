@@ -230,7 +230,7 @@ ul{
 }
 .achievement{
     padding:50px 0px 50px 0px;
-    font-size: 39px;
+    font-size: 30px;
     font-family: Roboto;
     cursor: default;
 }
@@ -262,6 +262,30 @@ ul{
     text-align: center;
     padding-top: 20px;
     background: #e8e8e8;
+}
+
+.slick-next, .slick-prev{
+    width:106px!important;
+}
+
+.slick-next:before, .slick-prev:before{
+    font-size: 65px;
+}
+
+.slick-dots, .slick-next, .slick-prev{
+    z-index: 100;
+}
+
+.slick-next{
+    right:-25px!important;
+}
+
+.slick-next:before, .slick-prev:before{
+    color:gray!important;
+}
+
+.slick-dots li button:before{
+    color: gray!important;
 }
 
 .docm_div_1{
@@ -365,7 +389,7 @@ ul{
 .about{
     cursor: default;
     padding:10px 0px 10px 0px;
-    font-size: 40px;
+    font-size: 30px;
     font-family: Roboto;
 }
 
@@ -433,6 +457,7 @@ cursor: pointer;
 .newsDescription{
     text-align: center;
     font-size: 15px;
+    font-style: italic;
     font-family: "Open Sans";
     color: #808080;
     overflow: hidden;
@@ -482,21 +507,22 @@ cursor: pointer;
     background-color: #f1f1f1;
 }
 .advantage{
-    padding:58px 0px 50px 25px;
+    text-align: right;
+    padding:129px 0px 50px 25px;
     color:#2d2d2d;
-    font-size: 26px;
+    font-size: 20px;
     font-family: "Open Sans";
 }
 .sectionTitles{
     padding:50px 0px 50px 0px;
-    font-size: 40px;
+    font-size: 30px;
     font-family: Roboto;
 }
 .whatYouGetText{
     text-align: center;
     color:#3b3b3b;
     font-family: "Open Sans";
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom:50px;
     max-width:850px;
 }
@@ -521,6 +547,7 @@ cursor: pointer;
 
 }
 .whatYouGetBlockText{
+    font-style: italic;
     /*font-family: "Open Sans";*/
     margin:25px 0px 55px 0px;
 }

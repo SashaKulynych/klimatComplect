@@ -6,7 +6,17 @@ import Footer from './Footer'
 import * as API from '../actions/api'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
+import {AreaChart, Area, XAxis, YAxis, Tooltip} from 'recharts';
+import YouTube from 'react-youtube';
+
+
+const opts = {
+    height: '340',
+    width: '470',
+    playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0
+    }
+};
 
 class MainPage extends Component {
     constructor(){
@@ -35,16 +45,20 @@ class MainPage extends Component {
             this.setState({paper:value.papers})
         });
     }
+
+    _onReady(event) {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo();
+    }
+
     render() {
         let settings = {
             dots: true,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight:true
+            slidesToScroll: 1
         };
-
         let newsFirst=this.state.news.slice(0,2).map((value)=>{
             let maxLength = 15;
             let title =value.title.length>15?value.title.substring(0, maxLength) + '...':value.title;
@@ -82,7 +96,7 @@ class MainPage extends Component {
                     </div>
                 </div>
             )
-        })
+        });
         return (
             <div>
                 <div style={{position:"absolute", zIndex:100, width:"100%", background:"#fff"}}>
@@ -255,9 +269,30 @@ class MainPage extends Component {
                         <div className="about">Про нас</div>
                     </div>
                     <div className="row">
-                        <div className="col d-flex justify-content-center">
-                            <span className="play"><i className="far fa-play-circle"> </i></span>
-                            <img className="img_us" src={require("./images/vent.png")} alt=""/>
+                        <div className="col-lg-6 col-sm-12" style={{padding:"0 105px"}}>
+                            <Slider {...settings}>
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <YouTube
+                                        videoId="o0DduApDpCI"
+                                        opts={opts}
+                                        onReady={this._onReady}
+                                    />
+                                </div>
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <YouTube
+                                        videoId="GNrkDOlU6Eg"
+                                        opts={opts}
+                                        onReady={this._onReady}
+                                    />
+                                </div>
+                                <div style={{display:"flex", justifyContent:"center"}}>
+                                    <YouTube
+                                        videoId="o0DduApDpCI"
+                                        opts={opts}
+                                        onReady={this._onReady}
+                                    />
+                                </div>
+                            </Slider>
                         </div>
                         <div className="col">
                             <div className="aboutUsText">
@@ -396,7 +431,7 @@ class MainPage extends Component {
                         </div>
                     </div>
                     <div className="text-center mb-5">
-                <span className="whatYouGetText col-12">
+                <span className="whatYouGetText col-12" style={{fontSize:30}}>
                     Головне правило нашої компанії: для успішного ведення бізнесу
                     необхідно передбачати тенденції та завжди бути на крок
                     попереду інших.
