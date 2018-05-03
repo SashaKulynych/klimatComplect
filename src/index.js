@@ -26,6 +26,7 @@ import News from './components/News'
 import Contacts from './components/contacts'
 import AllPaper from './components/AllPaper'
 import Paper from './components/Paper'
+import brands from './components/Brands'
 
 
 export const history = createHistory()
@@ -52,6 +53,7 @@ ReactDOM.render(
                 <Route exact path="/support" component={Contacts} />
                 <Route exact path="/AllPaper" component={AllPaper} />
                 <Route exact path="/Paper/:id" component={Paper} />
+                <Route exact path="/brands" component={brands} />
             </Switch>
         </ConnectedRouter>
     </Provider>

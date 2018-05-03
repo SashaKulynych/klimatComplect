@@ -12,9 +12,9 @@ class Footer extends Component {
                     <div className=" container_wrap">
                     <div className="row ml-0 mr-0">
                         <div className="col-lg-3 col-sm-12 footerBlockLeft d-flex justify-content-center align-items-center">
-                            <div className="footerLogoTextLeft">Клімат</div>
+                            <div className="footerLogoTextLeft">КЛІМАТ</div>
                             <img className="footerLogoImage" src={require("./images/logo.png")} alt="Logo"/>
-                            <div className="footerLogoTextRight">Комплект</div>
+                            <div className="footerLogoTextRight">КОМПЛЕКТ</div>
                         </div>
                         <div style={{margin:"auto"}} className="col-lg-6 col-sm-12  row d-flex justify-content-center footerCenter">
                             <div className="col-sm-12 col-lg-6 ">

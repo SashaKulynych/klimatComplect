@@ -33,9 +33,6 @@ class News extends Component {
         return (
             <div>
                 <Header/>
-                <div className="afterHeader">
-                    <img style={{width:"100%"}} src={require('./images/pictureCategory.png')} alt=""/>
-                </div>
                 <div className="col-lg-12  mt-5" >
                     <div className="newsTitle d-flex justify-content-center mb-3">{this.state.News.title}</div>
                     <div className="newsPicture d-flex justify-content-center align-items-center col-12"

@@ -65,9 +65,6 @@ class Support extends Component {
             <div>
                 <Header/>
                 <div className="support">
-                    <div className="afterHeader">
-                        <img className="afterHeaderPicture" src={require('./images/pictureSupp.png')} alt=""/>
-                    </div>
                     <div className="d-flex row" style={{margin:"0"}}>
                         <div className="col contactContainer">
                             <div style={{float:"right", maxWidth:"683"}}>

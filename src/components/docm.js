@@ -104,9 +104,6 @@ class Docm extends Component {
             <div>
                 <Header/>
                 <div>
-                <div className="afterHeader">
-                    <img style={{width:"100%"}} src={require('./images/pictureCategory.png')} alt=""/>
-                </div>
                 <div className="title_docm">
                     ТЕХНІЧНА ДОКУМЕНТАЦІЯ
                 </div>

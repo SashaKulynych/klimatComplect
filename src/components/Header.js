@@ -409,6 +409,7 @@ class Header extends Component {
                                     <ul id="2" className="collapse">
                                         {manufacts}
                                     </ul>
+                                    <span onClick={()=>this.props.history.push('/brands')} >БРЕНДИ</span>
                                     <span  data-toggle="collapse" data-target="#3">КОНТАКТИ &#8595;</span>
                                     <ul  id="3" className="collapse">
                                         <p style={{paddingLeft:25, color:"gray"}}>ПІДТРИМКА</p>
@@ -437,9 +438,14 @@ class Header extends Component {
                                         <ul>
                                             <li>
                                                 <span style={{paddingLeft:"40px"}}   data-toggle="collapse" data-target="#2">КАТЕГОРІЇ</span>
-                                                <ul style={{marginLeft:"30px"}} id="2" className="collapse">
+                                                <ul style={{marginLeft:"-12px"}} id="2" className="collapse">
                                                     {manufacts}
                                                 </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <span  onClick={()=>this.props.history.push('/brands')} style={{paddingLeft:"40px"}}>БРЕНДИ</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -447,17 +453,22 @@ class Header extends Component {
                             </div>
                             <div className="logoBlock">
                                 <div className="logo d-flex justify-content-center ">
-                                    <div className="logoTextLeft logoTextStyle">Клімат</div>
+                                    <div className="logoTextLeft logoTextStyle">КЛІМАТ</div>
                                     <img className="logoImage"
                                          onClick={()=>this.props.history.push('/')}
                                          src={require('./images/logo.png')} alt="Logo"/>
-                                    <div className="logoTextRight logoTextStyle">Комплект</div>
+                                    <div className="logoTextRight logoTextStyle">КОМПЛЕКТ</div>
                                 </div>
                             </div>
                             <div className="col menu-right-part d-flex justify-content-end">
                                 <ul>
                                     <li>
-                                        <span data-toggle="collapse" data-target="#3"  style={{paddingRight:"40px"}} onClick={()=>this.props.history.push('/contacts')} >КОНТАКТИ</span>
+                                        <span>ПРАЙС</span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span data-toggle="collapse" data-target="#3"  style={{paddingRight:"10px"}} onClick={()=>this.props.history.push('/contacts')} >КОНТАКТИ</span>
 
                                         <ul style={{marginLeft:"30px"}} id="3" className="collapse">
                                             <p style={{textAlign:"center", color:"grey"}}>ПІДТРИМКА</p>

@@ -237,9 +237,9 @@ class MainPage extends Component {
                 </div>
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-between"}}>
+                        <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-around"}}>
                             <div className="achievementBlock col-sm-12 col-lg-5">
-                                <div className="achievementBlockTitle toptitle">Збереження електроенергії</div>
+                                <div className="achievementBlockTitle toptitle" style={{paddingBottom:25}}>Збереження електроенергії</div>
                                 <img className="achievementBlockImage" src={require("./images/roket.png")} alt="roket"/>
                                     <div className="achievementBlockTitle">Вистачить для запуску ракети</div>
                             </div>
@@ -249,7 +249,7 @@ class MainPage extends Component {
                                 <div className="achievementBlockTitle">Їх встановлюють для охолодження біткоїн ферм</div>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-between"}}>
+                        <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-around"}}>
                             <div className="achievementBlock col-sm-12 col-lg-5">
                                 <div className="achievementBlockTitle toptitle">Найбільший вентилятор у зібраному стані</div>
                                 <img className="achievementBlockImage" src={require("./images/vandamm.png")} alt="vandamm"/>

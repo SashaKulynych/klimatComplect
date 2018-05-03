@@ -188,7 +188,7 @@
     display:block;
     color:#323232;
     text-decoration:none;
-    font-size:23px;
+    font-size:20px;
     padding: 30px 50px 40px 15px;
     font-family:Open Sans;
 }
@@ -266,8 +266,8 @@
     display:block;
     color:#323232;
     text-decoration:none;
-    font-size:23px;
-    padding: 30px 15px 40px 50px;
+    font-size:20px;
+    padding: 30px 15px 40px 40px;
     font-family:"Open Sans"
 }
 
@@ -290,7 +290,7 @@
     position:absolute;
     z-index: 100;
     top:96%;
-    right:-18px;
+    right:-49px;
     background:#fff;
     padding-bottom:10px;
 }
@@ -421,7 +421,7 @@
 }
 .header .logoTextStyle{
     color: #828282;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "Open Sans";
     font-weight: bold;
     cursor: default;
@@ -429,14 +429,13 @@
 .header .logoTextRight{
     position: absolute;
     bottom: 35px;
-    color: #d3731c;
-    margin-left: 97px;
+    margin-left: 93px;
 }
 .header .logoTextLeft{
     position: absolute;
     bottom: 35px;
     color: #d3731c;
-    margin-left: -84px;
+    margin-left: -79px;
 }
 .header .logoImage{
     cursor: pointer;
