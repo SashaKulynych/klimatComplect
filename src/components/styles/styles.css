@@ -188,7 +188,26 @@ ul{
     .brand_video{
         display: none;
     }
+    .block_1{
+        padding: 0!important;
+    }
+    .block_2{
+    padding: 0!important;
+    }
+    .img_g{
+        padding: 0!important;
+    }
 
+}
+
+
+.img_g{
+    padding-right: 89px;
+}
+
+.block_2{
+    padding-right: 0;
+    padding-left: 33px;
 }
 
 .footer_icon{
@@ -250,7 +269,7 @@ ul{
 .achievementBlockTitle{
 
     font-family: "Open Sans";
-    font-weight: 300;
+    font-weight: 700;
     position: relative;
     z-index: 10;
     cursor: default;
@@ -275,7 +294,12 @@ ul{
 }
 
 .slick-next:before, .slick-prev:before{
+    line-height: 0!important;
     font-size: 65px;
+}
+
+.slick-prev{
+    left: 18px;
 }
 
 .slick-dots, .slick-next, .slick-prev{
@@ -283,7 +307,7 @@ ul{
 }
 
 .slick-next{
-    right:-25px!important;
+    right:17px!important;
 }
 
 .slick-next:before, .slick-prev:before{
@@ -405,7 +429,7 @@ ul{
 
 .aboutUsText{
     cursor: default;
-    padding:40px 0px 10px 0px;
+    padding:40px 0px 10px 20px;
     text-align: left;
     font-size: 20px;
     float: left;
@@ -507,13 +531,19 @@ cursor: pointer;
 .newsBlock{
     cursor: pointer;
 }
+
+.block_1{
+    padding-left:0 ;
+    padding-right:40px ;
+}
+
 .advantageSection{
     height: 461px;
     background-color: #f1f1f1;
 }
 .advantage{
     text-align: right;
-    padding:129px 0px 50px 25px;
+    padding:129px 20px 50px 25px;
     color:#2d2d2d;
     font-size: 20px;
     font-family: "Open Sans";

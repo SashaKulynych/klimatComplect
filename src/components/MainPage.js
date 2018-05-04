@@ -12,7 +12,7 @@ import YouTube from 'react-youtube';
 
 const opts = {
     height: '340',
-    width: '470',
+    width: "600",
     playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
     }
@@ -239,26 +239,26 @@ class MainPage extends Component {
                     <div className="row justify-content-center">
                         <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-around"}}>
                             <div className="achievementBlock col-sm-12 col-lg-5">
-                                <div className="achievementBlockTitle toptitle" style={{paddingBottom:25}}>Збереження електроенергії</div>
+                                <div className="achievementBlockTitle toptitle" >ЗБЕРЕЖЕННОЇ електроенергії</div>
                                 <img className="achievementBlockImage" src={require("./images/roket.png")} alt="roket"/>
-                                    <div className="achievementBlockTitle">Вистачить для запуску ракети</div>
+                                    <div className="achievementBlockTitle">Вистачить для ЗАПУСКУ РАКЕТИ</div>
                             </div>
                             <div className="achievementBlock col-sm-12 col-lg-5">
-                                <div className="achievementBlockTitle toptitle">Наші вентилятори заробляють біткоїни</div>
+                                <div className="achievementBlockTitle toptitle">Наші вентилятори заробляють БІТКОЇНИ</div>
                                 <img className="achievementBlockImage" src={require("./images/bitcoin.png")} alt="bitcoin"/>
-                                <div className="achievementBlockTitle">Їх встановлюють для охолодження біткоїн ферм</div>
+                                <div className="achievementBlockTitle">Їх встановлюють для ОХОЛОДЖЕННЯ БІТКОЇН ФЕРМ</div>
                             </div>
                         </div>
                         <div className="col-lg-6 col-sm-12 row" style={{display:"flex", justifyContent:"space-around"}}>
                             <div className="achievementBlock col-sm-12 col-lg-5">
-                                <div className="achievementBlockTitle toptitle">Найбільший вентилятор у зібраному стані</div>
+                                <div className="achievementBlockTitle toptitle">НАЙБІЛЬШИЙ ВЕНТИЛЯТОР у зібраному стані</div>
                                 <img className="achievementBlockImage" src={require("./images/vandamm.png")} alt="vandamm"/>
-                                    <div className="achievementBlockTitle">Займав цілий грузовий автомобіль</div>
+                                    <div className="achievementBlockTitle">Займав цілий ГРУЗОВИЙ АВТОМОБІЛЬ</div>
                             </div>
                             <div className="achievementBlock col-sm-12 col-lg-5">
-                                <div className="achievementBlockTitle toptitle">Неймовірний Об‘єм очищеного повітря</div>
+                                <div className="achievementBlockTitle toptitle">Неймовірний Об‘єм ОЧИЩЕНОГО ПОВІТРЯ</div>
                                 <img className="achievementBlockImage" src={require("./images/air.png")} alt="air"/>
-                                    <div className="achievementBlockTitle">Можна створити атмосферу на Місяці</div>
+                                    <div className="achievementBlockTitle">Можна СТВОРИТИ АТМОСФЕРУ на Місяці</div>
                             </div>
                         </div>
                     </div>
@@ -269,7 +269,7 @@ class MainPage extends Component {
                         <div className="about">Про нас</div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-6 col-sm-12" style={{padding:"0 105px"}}>
+                        <div className="col-lg-6 col-sm-12" >
                             <Slider {...settings}>
                                 <div style={{display:"flex", justifyContent:"center"}}>
                                     <YouTube
@@ -281,13 +281,6 @@ class MainPage extends Component {
                                 <div style={{display:"flex", justifyContent:"center"}}>
                                     <YouTube
                                         videoId="GNrkDOlU6Eg"
-                                        opts={opts}
-                                        onReady={this._onReady}
-                                    />
-                                </div>
-                                <div style={{display:"flex", justifyContent:"center"}}>
-                                    <YouTube
-                                        videoId="o0DduApDpCI"
                                         opts={opts}
                                         onReady={this._onReady}
                                     />
@@ -356,7 +349,7 @@ class MainPage extends Component {
                                 нового рівня якості.
                             </div>
                         </div>
-                        <div className="col-sm-12 col-lg-6" style={{padding:0}}>
+                        <div className="col-sm-12 col-lg-6 img_g">
                             <img src={require("./images/advantage.png")} style={{height:"80%", margin:"auto"}} className="img_us" alt=""/>
                         </div>
                     </div>
@@ -390,7 +383,7 @@ class MainPage extends Component {
                                         </div>
                                 </div>
                             </div>
-                            <div className="col" >
+                            <div className="col block_1" >
                                 <div className="whatYouGetBlock">
                                     <img className="whatYouGetBlockImage" src={require("./images/advantage_.png")} alt=""/><br/>
                                         <div className="whatYouGetBlockText">
@@ -405,7 +398,7 @@ class MainPage extends Component {
                         </div>
 
                         <div className="row"  style={{margin:0}}>
-                            <div className="col">
+                            <div className="col block_2">
                                 <div className="whatYouGetBlock">
                                     <img className="whatYouGetBlockImage" src={require("./images/podium.png")} alt=""/><br/>
                                         <div className="whatYouGetBlockText">
