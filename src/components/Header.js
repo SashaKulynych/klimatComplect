@@ -415,6 +415,7 @@ class Header extends Component {
                                         <p style={{paddingLeft:25, color:"gray"}}>ПІДТРИМКА</p>
                                         <li  onClick={()=>this.props.history.push('/contacts')}><span>Зв'язок</span></li>
                                     </ul>
+                                    <span onClick={()=>window.open(require("./images/Price Ruck 2018.pdf"),'_blank')}>ПРАЙС</span>
                                     <span onClick={()=>this.props.history.push('/documentation')}>ТЕХНІЧНА ДОКУМЕНТАЦІЯ</span>
                                 </div>
                             </div>
@@ -463,7 +464,7 @@ class Header extends Component {
                             <div className="col menu-right-part d-flex justify-content-end">
                                 <ul>
                                     <li>
-                                        <span>ПРАЙС</span>
+                                        <span onClick={()=>window.open(require("./images/Price Ruck 2018.pdf"),'_blank')}>ПРАЙС</span>
                                     </li>
                                 </ul>
                                 <ul>
