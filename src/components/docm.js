@@ -79,6 +79,7 @@ class products extends Component {
                 </div>
                 <div>
 
+
                             <div className="row col-12 container_wrap">
                                 <div onClick={()=> this.setState({tabb:2})} className={`col-lg-6 col-sm-12 ${this.state.tabb===2?css(styles.li_docm_1):css(styles.li_docm)}`}><p><img style={{width:"85px"}}  src={require('./images/ruck.png')}  /></p></div>
                                 <div onClick={()=> this.setState({tabb:1})} className={`col-lg-6 col-sm-12 ${this.state.tabb===1?css(styles.li_docm_1):css(styles.li_docm)}`}><p><img style={{width:"85px"}}  src={require('./images/Logo_Sodeca_black.png')}  /></p></div>
