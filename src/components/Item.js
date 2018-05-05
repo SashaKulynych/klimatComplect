@@ -8,7 +8,7 @@ import Notifications, {notify} from 'react-notify-toast';
 
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-    import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
+import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
 import * as API from '../actions/api'
 
 
@@ -46,6 +46,7 @@ class Item extends Component {
         await API.getProduct(this.props.match.params.id).then((value) => {
             this.setState({product: value})
         });
+        console.log("this.props.match.params.id",this.props.match)
 
         await API.getModels(this.props.match.params.id).then((value) => {
             console.log('getModels', value)

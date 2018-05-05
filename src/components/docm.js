@@ -13,120 +13,75 @@ import Loader from 'react-loader-spinner'
 
 
 
+const categories =[
+    {id:1, name:"Вентиляційні установки"},
+    {id:2, name:"Дахові вентилятори"},
+    {id:3, name:"Електричні аксесуари"},
+    {id:4, name:"Канальні вентилятори"},
+    {id:5, name:"Кухонні вентилятори"},
+    {id:6, name:"Механічні аксесуари"},
+]
 
 
 
-class Docm extends Component {
+class products extends Component {
     constructor(props){
         super(props)
         this.state={
-            tab:1,
+            tabb:2,
             loading:true,
             allSubCategories:[],
             allProducts:[],
             products:[],
-            categories:[],
+            categories:[...categories],
             manufacts:[]
         }
     }
     async componentDidMount() {
-        let categories_id = localStorage.getItem('categories_id');
-        await API.getCategories().then(async (value)=> {
-            let getManufact = await API.getManufact().then((val) => {
-                    console.log('getManufact', val)
-                    return val
-                }
-            )
-            let getAllProducts = await API.getAllProducts().then((value)=>{
-                console.log('getAllProducts',value)
-                return value
-            })
-            let getAllSubCategories = await API.getAllSubCategories().then((value)=>{
-                console.log('getAllSubCategories',value)
-                return value
-            })
-            console.log('getCategories',value)
-            this.setState({loading:false,categories: value,allSubCategories:getAllSubCategories,allProducts:getAllProducts,manufacts:getManufact})
-            }
-        );
 
     }
 
 
     render() {
-        let manufacts = this.state.manufacts.map((value,index)=>{
+        let categories = this.state.categories.map((value, i)=>{
             return(
-                <div key={index} onClick={() => this.setState({tab:value.id})}    className={`col-lg-4 col-sm-12 ${this.state.tab===value.id?css(styles.li_docm_1):css(styles.li_docm)}`}><p>{value.name}</p></div>
-            )
-        })
-
-
-        let categories = this.state.categories.map((value,i)=>{
-            if(this.state.tab===value.manufact_id){
-                let array = []
-                this.state.allSubCategories.map((val)=>{
-                    if(val.category_id===value.id){
-                        let prod = this.state.allProducts.filter((v)=>v.sub_category_id===val.id)
-                        array=array.concat(prod)
-                    }
-                })
-                return(
-                    <div>
-                        <div className="docm_div_1">
-                            <span>{value.name}</span>
-                        </div>
-                        <div className="row" style={{margin:0,paddingLeft:20, position:"relative", zIndex:100, paddingTop:50,display:"flex", justifyContent:"center"}}>
-                        {array.length!==0?array.map((val,index)=>{
-                            return(
-                                <div key={index} style={{marginLeft:20, marginRight:20}}>
-                                    <a style={{paddingRight:10}} href={host+"api/get-techdata?name="+val.name}>
-                                        <li key={index} style={{width:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
-                                            <div className="itemTop">
-                                                {val.name}
-                                            </div>
-                                            <div className="item_2" style={{background:"#fff"}}>
-                                                <img className="DocmPicture" src={require('./images/cooler.png')} alt=""/>
-                                            </div>
-                                            <div className="docmBottom">
-                                                {val.name}
-                                            </div>
-                                        </li>
-                                    </a>
+                    <div  style={{margin:"auto"}}>
+                        <a style={{paddingRight:10}} href={"/documentation/"+value.id}>
+                            <li key={i} style={{width:200,border:"1px solid #acacac", background:"#fff", listStyle:"none"}}>
+                                <div className="itemTop">
+                                    {value.name}
                                 </div>
-                            )
-                        }):null}
-                        </div>
+                                <div className="item_2" style={{background:"#fff"}}>
+                                    <img className="DocmPicture" src={require('./images/Вентиляційні установки/ACCUFLOW.png')} alt=""/>
+                                </div>
+                            </li>
+                        </a>
                     </div>
-                )
-            }
+            )
         })
         return (
             <div>
                 <Header/>
                 <div>
-                <div className="title_docm">
-                    ТЕХНІЧНА ДОКУМЕНТАЦІЯ
+                    <div className="title_docm">
+                        ТЕХНІЧНА ДОКУМЕНТАЦІЯ
+                        {console.log("categories", this.state.categories)}
+                    </div>
                 </div>
-                   {
-                    this.state.loading?<div style={{textAlign:"center", padding:20}}><Loader
-                        type="TailSpin"
-                        color="yellow"
-                        height="100"
-                        width="100"
-                        />
-                        </div>:
-                        <div>
+                <div>
                             <div className="row col-12 container_wrap">
-                                {manufacts}
+                                <div onClick={()=> this.setState({tabb:2})} className={`col-lg-6 col-sm-12 ${this.state.tabb===2?css(styles.li_docm_1):css(styles.li_docm)}`}><p><img style={{width:"85px"}}  src={require('./images/ruck.png')}  /></p></div>
+                                <div onClick={()=> this.setState({tabb:1})} className={`col-lg-6 col-sm-12 ${this.state.tabb===1?css(styles.li_docm_1):css(styles.li_docm)}`}><p><img style={{width:"85px"}}  src={require('./images/Logo_Sodeca_black.png')}  /></p></div>
                             </div>
-                            <div>
+                            <div className="docm_div_1">
+                                    {this.state.tabb === 2? (<span>RUCK</span>):(<span>SODEKA</span>)}
+                            </div>
+                            <div className="row col-12 container_wrap" style={{paddingTop:25}}>
                                 {categories}
                             </div>
-                        </div>
-                }
                 </div>
                 <Footer/>
             </div>
         )
     }}
-export default connect(state => ({state:state}))(withRouter(Docm))
+export default connect(state => ({state:state}))(withRouter(products))

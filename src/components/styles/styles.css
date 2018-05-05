@@ -344,6 +344,10 @@ ul{
     color: black;
 }
 
+.list{
+    padding-top: 10px;
+}
+
 .itemTop{
     float: right;
     text-align: center;
@@ -388,12 +392,18 @@ ul{
     color: grey;
 }
 
-.docm_div_1, .docm_div_2 p{
+.docm_div_1{
+    padding-top: 10px;
     position: absolute;
     text-align: center;
     margin: 0;
-   height: 55px;
+    height: 55px;
     color: white;
+}
+
+.docm_div_1 span{
+    font-size: 20px;
+    font-family: "Open Sans";
 }
 
 .achievementBlockImage{
@@ -417,7 +427,7 @@ ul{
 }
 .about{
     cursor: default;
-    padding:10px 0px 10px 0px;
+    padding:50px 0px 50px 0px;
     font-size: 30px;
     font-family: Roboto;
 }

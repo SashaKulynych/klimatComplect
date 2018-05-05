@@ -415,7 +415,7 @@ class Header extends Component {
                                         <p style={{paddingLeft:25, color:"gray"}}>ПІДТРИМКА</p>
                                         <li  onClick={()=>this.props.history.push('/contacts')}><span>Зв'язок</span></li>
                                     </ul>
-                                    <span onClick={()=>this.props.history.push('/Docm')}>ТЕХНІЧНА ДОКУМЕНТАЦІЯ</span>
+                                    <span onClick={()=>this.props.history.push('/documentation')}>ТЕХНІЧНА ДОКУМЕНТАЦІЯ</span>
                                 </div>
                             </div>
                         </nav>
@@ -478,7 +478,7 @@ class Header extends Component {
                                 </ul>
                                 <ul>
                                     <li>
-                                        <span onClick={()=>this.props.history.push('/Docm')} style={{paddingBottom:0, paddingTop:16}} className="text-center">ТЕХНІЧНА<br />ДОКУМЕНТАЦІЯ</span>
+                                        <span onClick={()=>this.props.history.push('/documentation')} style={{paddingBottom:0, paddingTop:16}} className="text-center">ТЕХНІЧНА<br />ДОКУМЕНТАЦІЯ</span>
                                     </li>
                                 </ul>
                             </div>
