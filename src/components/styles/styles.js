@@ -29,5 +29,20 @@ export const styles = StyleSheet.create({
             marginBottom:0,
             fontFamily:"Arial",
         }
+    },
+    items:{
+        width:80,
+        height:80,
+        cursor:"pointer",
+        borderRadius:50,
+        background:"#dcdcdc",
+    },
+    itemsActve:{
+        width:80,
+        height:80,
+        cursor:"pointer",
+        borderRadius:50,
+        border:"2px solid #e18c44",
+        background:"#dcdcdc",
     }
 })

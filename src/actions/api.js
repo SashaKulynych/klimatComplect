@@ -110,6 +110,12 @@ export async function getShop(id) {
     }).then((response)=>response.json())
 }
 
+export async function getProductPhotos(id) {
+    return await fetch(host+'api/get-product-photos?product='+id, {
+        method: 'GET'
+    }).then((response)=>response.json())
+}
+
 export async function getData(name) {
     return await fetch(host+'api/get-techdata?name='+name, {
         method: 'GET'

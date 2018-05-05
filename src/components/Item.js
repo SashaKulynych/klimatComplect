@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
 import * as API from '../actions/api'
+import {styles} from "./styles/styles";
 
 
 let toast = { background: '#fed328', text: "#5f5f5f" };
@@ -37,7 +38,9 @@ class Item extends Component {
             },
             add:[],
             article:'',
-            dataa:[],
+            img:[],
+            activeImg:"",
+            noimg:"no-photo.jpg",
         }
     }
     async componentDidMount() {
@@ -46,7 +49,15 @@ class Item extends Component {
         await API.getProduct(this.props.match.params.id).then((value) => {
             this.setState({product: value})
         });
-        console.log("this.props.match.params.id",this.props.match)
+        await API.getProductPhotos(this.props.match.params.id).then((response) => {
+            console.log(response)
+            if(response == 0){
+                this.setState({activeImg:this.state.noimg})
+            }else {
+                this.setState({img: response, activeImg:response[0].img})
+
+            }
+        });
 
         await API.getModels(this.props.match.params.id).then((value) => {
             console.log('getModels', value)
@@ -100,7 +111,14 @@ class Item extends Component {
         catch (e){notify.show(e.message, "error", 3000);}
     }
 
+
+
     render() {
+        let img = this.state.img.map((value,index) =>{
+            return(
+                <div onClick={()=>this.setState({activeImg:value.img})} className={this.state.activeImg===value.img?css(styles.itemsActve):css(styles.items)} key={index}><img className="itemImage" src={`http://admin.klimatkomplect.com.ua/image/products/${value.img}`} alt=""/></div>
+            )
+        })
         let userInfo = JSON.parse(localStorage.getItem('userInfo'));
         let model = this.state.model.map((value, index)=>{
             return(
@@ -137,20 +155,13 @@ class Item extends Component {
         });
         return (
             <div>
-                {console.log("2",this.state.article)}
-                {this.graf(this.state.article)}
                 <Header/>
                 <div className="item container_wrap">
                     <div className="row itemContainer">
                         <div className="col-sm-12 col-lg-6">
-                            <img className="itemImage" src={require('./images/cooler.png')} alt=""/>
+                            <img className="itemImage" src={`http://admin.klimatkomplect.com.ua/image/products/${this.state.activeImg}`} alt=""/>
                             <div className="d-flex justify-content-between row">
-                                <div className="leftPartCircle"></div>
-                                <div className="leftPartCircle"></div>
-                                <div className="leftPartCircle"></div>
-                                <div className="leftPartCircle"></div>
-                                <div className="leftPartCircle"></div>
-                                <div className="leftPartCircle"></div>
+                                {img}
                             </div>
                         </div>
                         <div className="col d-flex flex-column justify-content-center rightPart">
