@@ -48,9 +48,6 @@ class AllPaper extends Component {
         return (
             <div>
                 <Header/>
-                <div className="afterHeader">
-                    <img style={{width:"100%"}} src={require('./images/pictureCategory.png')} alt=""/>
-                </div>
                 <div className="container">
                     <p className="col-12 title text-center">Всі статті</p>
                     <div className="row mb-4">
