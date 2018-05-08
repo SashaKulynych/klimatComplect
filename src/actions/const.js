@@ -1,1 +1,1 @@
-export const host = 'http://admin.klimatkomplect.com.ua/';
+export const host = "http://admin.klimatkomplect.com.ua/";
