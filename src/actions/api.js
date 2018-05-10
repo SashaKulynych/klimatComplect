@@ -12,6 +12,22 @@ export async function login(login) {
     })
 }
 
+export function getPointsForChart(articleId) {
+    return fetch(`http://www.ruck.eu/backend/rest/products/fpn/${articleId}?frequency=50&api_key=public`)
+        .then(res => {
+            return res.text();
+        })
+        .then(id => {
+            return id && fetch(`http://www.ruck.eu/backend/rest/calculations/standarddata?partNumber=${id}&curveType=0&etaDistance=70&curvePoints=50&language=de&api_key=public`)            
+        })
+        .then(res => {
+            return res.json()
+        })
+        .then(data => data)
+        .catch(err => {
+            console.error('API getPointsForChart:\n', err)
+        })
+}
 
 export async function register(registration) {
     let formData = new FormData();

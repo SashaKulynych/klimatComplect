@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/styles.css';
 import Slider from 'react-slick';
 import Header from './Header'
+import CustomChart from './CustomChart'
 import Footer from './Footer'
 import * as API from '../actions/api'
 import { connect } from 'react-redux'
@@ -52,6 +53,7 @@ class MainPage extends Component {
     }
 
     render() {
+        return <CustomChart />
         let settings = {
             dots: true,
             infinite: true,
