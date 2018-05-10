@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./styles/header.css";
 import Modal from "react-responsive-modal";
 import Notifications, { notify } from "react-notify-toast";
 
@@ -414,284 +413,364 @@ class Header extends Component {
 
     return (
       <div className="header">
-        <Notifications options={{ zIndex: 5000 }} />
-        <div className="bg_header">
-          <div className="container_wrap" style={{ padding: "0" }}>
+        <div className="topline">
+          <div className="social">
+            <a
+              href="https://www.facebook.com/klimatkomplekt/"
+              title="Facebook"
+              target="_blank"
+            >
+              <img src={require("./images/social/fb.png")} alt="Facebook" />
+            </a>
+            <a
+              href="https://www.instagram.com/klimatkomplekt.com.ua/"
+              title="Instagram"
+              target="_blank"
+            >
+              <img src={require("./images/social/ig.png")} alt="Instagram" />
+            </a>
+            <a
+              href="https://plus.google.com/u/4/110288975361999381293?hl=ru"
+              title="Google+"
+              target="_blank"
+            >
+              <img src={require("./images/social/gp.png")} alt="Google+" />
+            </a>
+          </div>
+          <div className="userinfo">
             {this.registrationView()}
             {this.authorizationView()}
-            <div className="row col headerCircles">
-              <div
-                className="row col-lg-3 col-sm-11
-                        "
-                style={{ paddingLeft: 21 }}
-              >
-                <div className="fb">
-                  <a href="https://www.facebook.com/klimatkomplekt/">
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                </div>
-                <div className="tw">
-                  <a href="https://plus.google.com/u/4/110288975361999381293?hl=ru">
-                    <i className="fab fa-google-plus-g"> </i>
-                  </a>
-                </div>
-                <div className="ig">
-                  <a href="https://www.instagram.com/klimatkomplekt.com.ua/">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </div>
-              </div>
-              <div className="row col headerRightPart">
-                {/*<div className="text phone">+380443791090 </div>*/}
-                {/*<span className="phone_1">+380662791090 +380682791090 +380932791090</span>*/}
-                <span
-                  data-toggle="collapse"
-                  className="text phone"
-                  data-target="#6"
-                >
-                  <i className="fas fa-arrow-down"> </i> +38 (044) 379 10 90
-                </span>
-                <ul id="6" className="collapse hide_phone">
-                  <li>
-                    <span> +38 (066) 279 10 90</span>
-                  </li>
-                  <li>
-                    <span> +38 (068) 279 10 90</span>
-                  </li>
-                  <li>
-                    <span> +38 (093) 279 10 90</span>
-                  </li>
-                </ul>
-                <div className="text email">info@klimatkomplect.com.ua</div>
-                {this.props.userInfo === null ? (
-                  <div className="row">
-                    <div className="circle" onClick={this.openAuthonOpenModal}>
-                      <i className="fas fa-user" />
-                    </div>
-                    <div
-                      className="text enter"
-                      onClick={this.openAuthonOpenModal}
-                    >
-                      Вхід
-                    </div>
-                  </div>
-                ) : (
-                  <div className="row">
-                    <div
-                      onClick={() => this.props.history.push("/dealer")}
-                      className="circle"
-                    >
-                      {this.state.count == null ? (
-                        <div className="shop_numb">
-                          {this.state.count.map(value => value.count)}
-                        </div>
-                      ) : null}
-                      <i className="fas fa-shopping-cart" />
-                    </div>
-                    <div
-                      onClick={() => this.logOut()}
-                      className="circle"
-                      style={{ backgroundColor: "#fe9228" }}
-                    >
-                      <i className="fas fa-user" />
-                    </div>
-                    <div className="text enter">{this.props.userInfo.name}</div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="hideMenu">
-          <nav className="navbar navbar-toggleable-md navbar-light bg-faded hideMainMenu">
-            <button
-              className="navbar-toggler navbar-toggler-right"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"> </span>
-            </button>
             <div
-              className="row"
               data-toggle="collapse"
-              data-target="#navbarNavAltMarkup"
+              className="phone"
+              data-target="#phoneslist"
             >
-              <img
-                className="hideMenuLogo"
-                onClick={() => this.props.history.push("/")}
-                src={require("./images/logo.png")}
-                alt="Logo"
-              />
-              <span className="navbar-brand ">Клімат комплект</span>
+              +38 (044) 379 10 90
+              <ul id="phoneslist" className="collapse hide_phone">
+                <li>
+                  <span>+38 (066) 279 10 90</span>
+                </li>
+                <li>
+                  <span>+38 (068) 279 10 90</span>
+                </li>
+                <li>
+                  <span>+38 (093) 279 10 90</span>
+                </li>
+              </ul>
             </div>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav">
-                <span data-toggle="collapse" data-target="#1">
-                  ГОЛОВНА &#8595;
-                </span>
-                <ul id="1" className="collapse">
-                  <li onClick={() => this.props.history.push("/about")}>
-                    <span>Про компанію</span>
-                  </li>
-                  <li onClick={() => this.props.history.push("/reference")}>
-                    <span>Референс</span>
-                  </li>
-                  <li onClick={() => this.props.history.push("/service")}>
-                    <span>Сервіс</span>
-                  </li>
-                </ul>
-
-                <span data-toggle="collapse" data-target="#2">
-                  КАТЕГОРІЇ &#8595;
-                </span>
-                <ul id="2" className="collapse">
-                  {manufacts}
-                </ul>
-                <span onClick={() => this.props.history.push("/brands")}>
-                  БРЕНДИ
-                </span>
-                <span data-toggle="collapse" data-target="#3">
-                  КОНТАКТИ &#8595;
-                </span>
-                <ul id="3" className="collapse">
-                  <p style={{ paddingLeft: 25, color: "gray" }}>ПІДТРИМКА</p>
-                  <li onClick={() => this.props.history.push("/contacts")}>
-                    <span>Зв'язок</span>
-                  </li>
-                </ul>
-                <span onClick={() => this.props.history.push("/documentation")}>
-                  ТЕХНІЧНА ДОКУМЕНТАЦІЯ
-                </span>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <div className="mainMenu container_wrap">
-          <div
-            className="row menu d-flex align-items-center"
-            style={{ margin: "0" }}
-          >
-            <div className="col d-flex justify-content-start">
-              <div className="row">
-                <div className="menu-left-part">
-                  <ul>
-                    <li>
-                      <span
-                        onClick={() => this.props.history.push("/")}
-                        data-toggle="collapse"
-                        data-target="#1"
-                      >
-                        ГОЛОВНА
-                      </span>
-                      <ul id="1" className="collapse">
-                        <li onClick={() => this.props.history.push("/about")}>
-                          <span>Про компанію</span>
-                        </li>
-                        <li
-                          onClick={() => this.props.history.push("/reference")}
-                        >
-                          <span>Референс</span>
-                        </li>
-                        <li onClick={() => this.props.history.push("/service")}>
-                          <span>Сервіс</span>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <span
-                        style={{ paddingLeft: "40px" }}
-                        data-toggle="collapse"
-                        data-target="#2"
-                      >
-                        КАТЕГОРІЇ
-                      </span>
-                      <ul
-                        style={{ marginLeft: "-12px" }}
-                        id="2"
-                        className="collapse"
-                      >
-                        {manufacts}
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <span
-                        onClick={() => this.props.history.push("/brands")}
-                        style={{ paddingLeft: "40px" }}
-                      >
-                        БРЕНДИ
-                      </span>
-                    </li>
-                  </ul>
+            <div className="email">info@klimatkomplect.com.ua</div>
+            <div className="row">
+              {this.props.userInfo ? (
+                <div>
+                  <div
+                    onClick={() => this.props.history.push("/dealer")}
+                    className="circle"
+                  >
+                    {this.state.count == null ? (
+                      <div className="shop_numb">
+                        {this.state.count.map(value => value.count)}
+                      </div>
+                    ) : null}
+                    <i className="fas fa-shopping-cart" />
+                  </div>
+                  <div
+                    onClick={() => this.logOut()}
+                    className="circle"
+                    style={{ backgroundColor: "#fe9228" }}
+                  >
+                    <i className="fas fa-user" /> {this.props.userInfo.name}
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="logoBlock">
-              <div className="logo d-flex justify-content-center ">
-                <div className="logoTextLeft logoTextStyle">КЛІМАТ</div>
-                <img
-                  className="logoImage"
-                  onClick={() => this.props.history.push("/")}
-                  src={require("./images/logo.png")}
-                  alt="Logo"
-                />
-                <div className="logoTextRight logoTextStyle">КОМПЛЕКТ</div>
-              </div>
-            </div>
-            <div className="col menu-right-part d-flex justify-content-end">
-              <ul>
-                <li>
-                  <span>ПРАЙС</span>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <span
-                    data-toggle="collapse"
-                    data-target="#3"
-                    style={{ paddingRight: "10px" }}
-                    onClick={() => this.props.history.push("/contacts")}
-                  >
-                    КОНТАКТИ
-                  </span>
-
-                  <ul
-                    style={{ marginLeft: "30px" }}
-                    id="3"
-                    className="collapse"
-                  >
-                    <p style={{ textAlign: "center", color: "grey" }}>
-                      ПІДТРИМКА
-                    </p>
-                    <li onClick={() => this.props.history.push("/support")}>
-                      <span className="potd">Зв'язок</span>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <span
-                    onClick={() => this.props.history.push("/documentation")}
-                    style={{ paddingBottom: 0, paddingTop: 16 }}
-                    className="text-center"
-                  >
-                    ТЕХНІЧНА<br />ДОКУМЕНТАЦІЯ
-                  </span>
-                </li>
-              </ul>
+              ) : (
+                <div className="circle" onClick={this.openAuthonOpenModal}>
+                  <i className="fas fa-user" />
+                  Вхід
+                </div>
+              )}
             </div>
           </div>
         </div>
+        <div className="navigation" />
       </div>
+      // <div className="header">
+      //   <Notifications options={{ zIndex: 5000 }} />
+      //   <div className="bg_header">
+      //     <div className="container_wrap">
+      //       {this.registrationView()}
+      //       {this.authorizationView()}
+      //       <div className="row col headerCircles">
+      //         <div
+      //           className="row col-lg-3 col-sm-11
+      //                   "
+      //           style={{ paddingLeft: 21 }}
+      //         >
+      //           <div className="fb">
+      //             <a href="https://www.facebook.com/klimatkomplekt/">
+      //               <i className="fab fa-facebook-f" />
+      //             </a>
+      //           </div>
+      //           <div className="tw">
+      //             <a href="https://plus.google.com/u/4/110288975361999381293?hl=ru">
+      //               <i className="fab fa-google-plus-g"> </i>
+      //             </a>
+      //           </div>
+      //           <div className="ig">
+      //             <a href="https://www.instagram.com/klimatkomplekt.com.ua/">
+      //               <i className="fab fa-instagram" />
+      //             </a>
+      //           </div>
+      //         </div>
+      //         <div className="row col headerRightPart">
+      //           {/*<div className="text phone">+380443791090 </div>*/}
+      //           {/*<span className="phone_1">+380662791090 +380682791090 +380932791090</span>*/}
+      //           <span
+      //             data-toggle="collapse"
+      //             className="text phone"
+      //             data-target="#6"
+      //           >
+      //             <i className="fas fa-arrow-down"> </i> +38 (044) 379 10 90
+      //           </span>
+      //           <ul id="6" className="collapse hide_phone">
+      //             <li>
+      //               <span> +38 (066) 279 10 90</span>
+      //             </li>
+      //             <li>
+      //               <span> +38 (068) 279 10 90</span>
+      //             </li>
+      //             <li>
+      //               <span> +38 (093) 279 10 90</span>
+      //             </li>
+      //           </ul>
+      //           <div className="text email">info@klimatkomplect.com.ua</div>
+      //           {this.props.userInfo === null ? (
+      //             <div className="row">
+      //               <div className="circle" onClick={this.openAuthonOpenModal}>
+      //                 <i className="fas fa-user" />
+      //               </div>
+      //               <div
+      //                 className="text enter"
+      //                 onClick={this.openAuthonOpenModal}
+      //               >
+      //                 Вхід
+      //               </div>
+      //             </div>
+      //           ) : (
+      //             <div className="row">
+      //               <div
+      //                 onClick={() => this.props.history.push("/dealer")}
+      //                 className="circle"
+      //               >
+      //                 {this.state.count == null ? (
+      //                   <div className="shop_numb">
+      //                     {this.state.count.map(value => value.count)}
+      //                   </div>
+      //                 ) : null}
+      //                 <i className="fas fa-shopping-cart" />
+      //               </div>
+      //               <div
+      //                 onClick={() => this.logOut()}
+      //                 className="circle"
+      //                 style={{ backgroundColor: "#fe9228" }}
+      //               >
+      //                 <i className="fas fa-user" />
+      //               </div>
+      //               <div className="text enter">{this.props.userInfo.name}</div>
+      //             </div>
+      //           )}
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+
+      //   <div className="hideMenu">
+      //     <nav className="navbar navbar-toggleable-md navbar-light bg-faded hideMainMenu">
+      //       <button
+      //         className="navbar-toggler navbar-toggler-right"
+      //         type="button"
+      //         data-toggle="collapse"
+      //         data-target="#navbarNavAltMarkup"
+      //         aria-controls="navbarNavAltMarkup"
+      //         aria-expanded="false"
+      //         aria-label="Toggle navigation"
+      //       >
+      //         <span className="navbar-toggler-icon"> </span>
+      //       </button>
+      //       <div
+      //         className="row"
+      //         data-toggle="collapse"
+      //         data-target="#navbarNavAltMarkup"
+      //       >
+      //         <img
+      //           className="hideMenuLogo"
+      //           onClick={() => this.props.history.push("/")}
+      //           src={require("./images/logo.png")}
+      //           alt="Logo"
+      //         />
+      //         <span className="navbar-brand ">Клімат комплект</span>
+      //       </div>
+      //       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      //         <div className="navbar-nav">
+      //           <span data-toggle="collapse" data-target="#1">
+      //             ГОЛОВНА &#8595;
+      //           </span>
+      //           <ul id="1" className="collapse">
+      //             <li onClick={() => this.props.history.push("/about")}>
+      //               <span>Про компанію</span>
+      //             </li>
+      //             <li onClick={() => this.props.history.push("/reference")}>
+      //               <span>Референс</span>
+      //             </li>
+      //             <li onClick={() => this.props.history.push("/service")}>
+      //               <span>Сервіс</span>
+      //             </li>
+      //           </ul>
+
+      //           <span data-toggle="collapse" data-target="#2">
+      //             КАТЕГОРІЇ &#8595;
+      //           </span>
+      //           <ul id="2" className="collapse">
+      //             {manufacts}
+      //           </ul>
+      //           <span onClick={() => this.props.history.push("/brands")}>
+      //             БРЕНДИ
+      //           </span>
+      //           <span data-toggle="collapse" data-target="#3">
+      //             КОНТАКТИ &#8595;
+      //           </span>
+      //           <ul id="3" className="collapse">
+      //             <p style={{ paddingLeft: 25, color: "gray" }}>ПІДТРИМКА</p>
+      //             <li onClick={() => this.props.history.push("/contacts")}>
+      //               <span>Зв'язок</span>
+      //             </li>
+      //           </ul>
+      //           <span onClick={() => this.props.history.push("/documentation")}>
+      //             ТЕХНІЧНА ДОКУМЕНТАЦІЯ
+      //           </span>
+      //         </div>
+      //       </div>
+      //     </nav>
+      //   </div>
+      //   <div className="mainMenu container_wrap">
+      //     <div
+      //       className="row menu d-flex align-items-center"
+      //       style={{ margin: "0" }}
+      //     >
+      //       <div className="col d-flex justify-content-start">
+      //         <div className="row">
+      //           <div className="menu-left-part">
+      //             <ul>
+      //               <li>
+      //                 <span
+      //                   onClick={() => this.props.history.push("/")}
+      //                   data-toggle="collapse"
+      //                   data-target="#1"
+      //                 >
+      //                   ГОЛОВНА
+      //                 </span>
+      //                 <ul id="1" className="collapse">
+      //                   <li onClick={() => this.props.history.push("/about")}>
+      //                     <span>Про компанію</span>
+      //                   </li>
+      //                   <li
+      //                     onClick={() => this.props.history.push("/reference")}
+      //                   >
+      //                     <span>Референс</span>
+      //                   </li>
+      //                   <li onClick={() => this.props.history.push("/service")}>
+      //                     <span>Сервіс</span>
+      //                   </li>
+      //                 </ul>
+      //               </li>
+      //             </ul>
+      //             <ul>
+      //               <li>
+      //                 <span
+      //                   style={{ paddingLeft: "40px" }}
+      //                   data-toggle="collapse"
+      //                   data-target="#2"
+      //                 >
+      //                   КАТЕГОРІЇ
+      //                 </span>
+      //                 <ul
+      //                   style={{ marginLeft: "-12px" }}
+      //                   id="2"
+      //                   className="collapse"
+      //                 >
+      //                   {manufacts}
+      //                 </ul>
+      //               </li>
+      //             </ul>
+      //             <ul>
+      //               <li>
+      //                 <span
+      //                   onClick={() => this.props.history.push("/brands")}
+      //                   style={{ paddingLeft: "40px" }}
+      //                 >
+      //                   БРЕНДИ
+      //                 </span>
+      //               </li>
+      //             </ul>
+      //           </div>
+      //         </div>
+      //       </div>
+      //       <div className="logoBlock">
+      //         <div className="logo d-flex justify-content-center ">
+      //           <div className="logoTextLeft logoTextStyle">КЛІМАТ</div>
+      //           <img
+      //             className="logoImage"
+      //             onClick={() => this.props.history.push("/")}
+      //             src={require("./images/logo.png")}
+      //             alt="Logo"
+      //           />
+      //           <div className="logoTextRight logoTextStyle">КОМПЛЕКТ</div>
+      //         </div>
+      //       </div>
+      //       <div className="col menu-right-part d-flex justify-content-end">
+      //         <ul>
+      //           <li>
+      //             <span>ПРАЙС</span>
+      //           </li>
+      //         </ul>
+      //         <ul>
+      //           <li>
+      //             <span
+      //               data-toggle="collapse"
+      //               data-target="#3"
+      //               style={{ paddingRight: "10px" }}
+      //               onClick={() => this.props.history.push("/contacts")}
+      //             >
+      //               КОНТАКТИ
+      //             </span>
+
+      //             <ul
+      //               style={{ marginLeft: "30px" }}
+      //               id="3"
+      //               className="collapse"
+      //             >
+      //               <p style={{ textAlign: "center", color: "grey" }}>
+      //                 ПІДТРИМКА
+      //               </p>
+      //               <li onClick={() => this.props.history.push("/support")}>
+      //                 <span className="potd">Зв'язок</span>
+      //               </li>
+      //             </ul>
+      //           </li>
+      //         </ul>
+      //         <ul>
+      //           <li>
+      //             <span
+      //               onClick={() => this.props.history.push("/documentation")}
+      //               style={{ paddingBottom: 0, paddingTop: 16 }}
+      //               className="text-center"
+      //             >
+      //               ТЕХНІЧНА<br />ДОКУМЕНТАЦІЯ
+      //             </span>
+      //           </li>
+      //         </ul>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>
     );
   }
 }
