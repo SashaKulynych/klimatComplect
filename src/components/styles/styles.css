@@ -201,6 +201,18 @@ ul{
 }
 
 
+.text_ser{
+    padding: 0;
+}
+
+.doc_text{
+    padding-top: 70px;
+}
+
+.text_ser div{
+  border: 1px solid black;
+}
+
 .img_g{
     padding-right: 89px;
 }
@@ -260,9 +272,9 @@ ul{
     cursor: default;
 }
 .achievementBlock{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
     margin: 0 20px 10px 0!important;
     padding: 0;
-    border: 1px solid #ffca13;
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
@@ -276,7 +288,6 @@ ul{
 }
 
 .toptitle{
-    background: #ffcc1a;
     border-radius: 10px 10px 0 0;
 }
 
@@ -320,7 +331,11 @@ ul{
 
 .docm_div_1{
     width: 100%;
-    background: #4b9bff;
+    background: #fdbb1d;
+}
+
+.list_sodeks li{
+    padding-bottom: 5px;
 }
 
 .docm_div_2{
@@ -330,7 +345,7 @@ ul{
 }
 
 .DocmPicture{
-    width: 86px;
+    width: 100%;
 }
 
 .categoryView_1{
@@ -351,11 +366,10 @@ ul{
 .itemTop{
     float: right;
     text-align: center;
-    width: 120px;
+    width: 100%;
     font-size:14px;
     margin:10px;
     color:#000;
-    background:#ffd75f ;
 }
 
 .potd{
@@ -423,7 +437,10 @@ ul{
 
 .aboutUs{
     margin-top: 25px;
-    background-color: #f1f1f1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/bg_home.gif");;
 }
 .about{
     cursor: default;
@@ -548,12 +565,15 @@ cursor: pointer;
 }
 
 .advantageSection{
-    height: 461px;
-    background-color: #f1f1f1;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/bg_home_1.png");;
 }
 .advantage{
-    text-align: right;
-    padding:129px 20px 50px 25px;
+    text-align: left;
+    padding:86px 20px 50px 25px;
     color:#2d2d2d;
     font-size: 20px;
     font-family: "Open Sans";
@@ -571,12 +591,28 @@ cursor: pointer;
     margin-bottom:50px;
     max-width:850px;
 }
+
+.ref_bloc_1{
+    padding: 50px 51px 150px;
+    text-align: center;
+}
+
+.as_list p{
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.as_list ul li{
+    padding-bottom: 10px;
+}
+
 .whatYouGetBlock{
     min-height:475px;
     width:250px;
     text-align: center;
     border-radius: 150px;
-    background-color: #fddb1d;
+    border: 1px solid #484848;
     padding:10px;
     margin:10px auto;
 }

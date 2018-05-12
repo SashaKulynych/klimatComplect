@@ -4,10 +4,10 @@
 }
 .support .contactContainer{
     background: url("../images/maps.png");
-    padding:75px;
+    padding:25px;
 }
 .support .supportContainer{
-    padding:75px;
+    padding:25px 0 0 59px;
 }
 .support .contact{
     font-family: Roboto;
@@ -27,6 +27,7 @@
     font-size: 25px;
 }
 
+
 .img_supp{
     width:100%;
     padding:0 100px
@@ -36,7 +37,7 @@
     font-size: 26px;
 }
 .support .supportContainer{
-    background-color: #ffea00;
+    background-color: #ffc600;
 }
 .support .nameInputGroup{
 
@@ -51,8 +52,20 @@
     margin-left: 10px;
     background-color: transparent;
     border: none;
-    width: 95%;
+    width: 90%;
 }
+
+.Modal-modal-0-1-3{
+    background: none!important;
+    box-shadow: none!important;
+    text-align: center!important;
+}
+
+.Modal-closeIcon-0-1-4{
+    right: auto!important;
+    top:auto!important;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
     opacity: 1; /* Firefox */
@@ -79,7 +92,7 @@ input:focus {
     height: 0;
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
-    border-right:40px solid #ffea00;
+    border-right:40px solid #ffc600;
     left:-40px;
 }
 

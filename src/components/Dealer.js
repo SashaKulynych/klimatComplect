@@ -13,7 +13,7 @@ class Dealer extends Component {
     constructor(props){
         super(props)
         this.state = {
-            tab:0,
+            tab:1,
             add:[]
         };
         this.changeTab = this.changeTab.bind(this);
@@ -66,7 +66,26 @@ class Dealer extends Component {
                 <div className="dealer">
                     <div className="d-flex row container_wrap">
                         <p className="col-12 title mt-2 text-center">Корзина</p>
-                        <div className="col-sm-12 col-lg-12 categoryView">
+                        <div className="col-sm-12 col-lg-3 categoryMenu">
+                            <ul className="list_del">
+                                <li onClick={()=> this.setState({tab:1})}>
+                                    <span className={this.state.tab===1?css(styles.borderYellow):null}>Історія покупок (звіт)</span>
+                                </li>
+                                <li  onClick={()=> this.setState({tab:2})}>
+                                    <span className={this.state.tab===2?css(styles.borderYellow):null}>Семінари</span>
+                                </li>
+                                <li  onClick={()=> this.setState({tab:3})}>
+                                    <span className={this.state.tab===3?css(styles.borderYellow):null}>Конференції</span>
+                                </li>
+                                <li  onClick={()=> this.setState({tab:4})}>
+                                    <span className={this.state.tab===4?css(styles.borderYellow):null}>Інформація</span>
+                                </li>
+                                <li  onClick={()=> this.setState({tab:5})}>
+                                    <span className={this.state.tab===5?css(styles.borderYellow):null}>Документація</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="col-sm-9 col-lg-9 categoryView">
                             <table className="col-12 ">
                                 <tr className="col-1">
                                     <th>№</th>

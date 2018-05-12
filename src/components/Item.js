@@ -11,6 +11,7 @@ import { withRouter } from 'react-router'
 import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
 import * as API from '../actions/api'
 import {styles} from "./styles/styles";
+import CustomChart from "./CustomChart"
 
 
 let toast = { background: '#fed328', text: "#5f5f5f" };
@@ -158,11 +159,12 @@ class Item extends Component {
                 <Header/>
                 <div className="item container_wrap">
                     <div className="row itemContainer">
-                        <div className="col-sm-12 col-lg-6">
-                            <img className="itemImage" src={`http://admin.klimatkomplect.com.ua/image/products/${this.state.activeImg}`} alt=""/>
-                            <div className="d-flex justify-content-between row">
+                        <div className="col-sm-12 col-lg-6 row" style={{borderRight:"1px solid black"}}>
+                            <div className=" col-2 d-flex justify-content-between row">
                                 {img}
                             </div>
+                            <img className="col-10 itemImage" src={`http://admin.klimatkomplect.com.ua/image/products/${this.state.activeImg}`} alt=""/>
+
                         </div>
                         <div className="col d-flex flex-column justify-content-center rightPart">
                             {/*<div className="subTitle">*/}
@@ -174,14 +176,14 @@ class Item extends Component {
                             <div className="description">
                                 {this.state.product.desc}
                             </div>
-                            <div className="row">
-                                <div className="rightButtonStyle col-sm-12">
+                            <div className="row col-12">
+                                <div className="col-lg-4 rightButtonStyle col-sm-12">
                                     <span>Опис</span>
                                 </div>
-                                <div className="rightButtonStyle col-sm-12">
+                                <div className="col-lg-4 rightButtonStyle col-sm-12">
                                     <span onClick={()=>this.props.history.push('/Docm')}>Технічні дані</span>
                                 </div>
-                                <div  className="rightButtonStyle col-sm-12">
+                                <div  className="col-lg-4 rightButtonStyle col-sm-12">
                                     <span >Характеристики</span>
                                 </div>
                             </div>
@@ -210,23 +212,9 @@ class Item extends Component {
                     </div>
 
                     <div className="graf_2">
-                        <AreaChart className="col-12 row"  width={330} height={350} data={this.state.data}>
-                            <defs >
-                                <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="5%" stopColor="rgb(2, 74, 229)" stopOpacity={0.8}/>
-                                    <stop offset="95%" stopColor="rgb(2, 74, 229)" stopOpacity={0.1}/>
-                                </linearGradient>
-                                <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="5%" stopColor="rgb(214, 221, 6)" stopOpacity={0.8}/>
-                                    <stop offset="95%" stopColor="rgb(214, 221, 6)" stopOpacity={0.1}/>
-                                </linearGradient>
-                            </defs>
-                            <XAxis dataKey="name" stroke="#212121"/>
-                            <YAxis stroke="#212121"/>
-                            <Tooltip/>
-                            <Area type="monotone" dataKey="total" stroke="#8884d8" fill="url(#colorUv)"/>
-                            <Area type="monotone" dataKey="lol" stroke="#82ca9d" fill="url(#colorPv)"/>
-                        </AreaChart>
+                       {/*/super/mega/secret/route/for/chart/development*/}
+                       {/*<CustomChart/>*/}
+                       {/*/super/mega/secret/route/for/chart/development*/}
                     </div>
                     <div className="col-sm-12 col-lg-12 categoryView">
                         <table className="col-12 ">

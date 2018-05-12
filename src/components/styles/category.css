@@ -6,9 +6,10 @@
     margin: 0;
     width: 100%;
 }
-.categories .categoryMenu{
+.categoryMenu{
     display: flex;
     width: 300px;
+    border-bottom: 40px solid #ffeb01;
     background-color: #4f4f4f;
     padding: 25px 0px 0px 0px;
     height:auto;
@@ -60,8 +61,7 @@
     justify-content: flex-end;
     align-items: center;
     width:200px;
-    border-right: 1px solid #acacac;
-    margin-right: 20px;
+    margin: 0 auto;
 }
 .itemBottom{
     height: 50px;

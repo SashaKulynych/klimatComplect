@@ -28,7 +28,9 @@
     font-family: "Open Sans";
     font-weight: bold;
     cursor: default;
-    padding-right: 5px;
+    position: absolute;
+    top:52px;
+    right: 86px;
 }
 .footer .footerLogoTextRight{
     color: #fff;
