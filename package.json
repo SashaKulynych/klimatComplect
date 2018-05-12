@@ -6,6 +6,7 @@
     "aphrodite": "^1.2.5",
     "history": "^4.7.2",
     "material-ui": "^0.20.0",
+    "node-sass": "^4.9.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -18,7 +19,7 @@
     "react-responsive-modal": "^2.0.1",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
-    "react-scripts": "1.1.1",
+    "react-scripts": "^2.0.0-next.66cc7a90",
     "react-slick": "^0.18.1",
     "react-youtube": "^7.6.0",
     "recharts": "^1.0.0-beta.10",
@@ -30,5 +31,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
   }
 }

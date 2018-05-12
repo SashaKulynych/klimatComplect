@@ -1,6 +1,7 @@
 import React from 'react';
 import LineChart from 'react-linechart';
 import '../../node_modules/react-linechart/dist/styles.css';
+import './styles/charts.scss';
 import { getPointsForChart } from '../actions/api';
 
 class CustomChart extends React.Component {
@@ -88,26 +89,27 @@ class CustomChart extends React.Component {
 
   render() {
     const {loaded, error, chartData} = this.state;
+    const container = document.getElementsByClassName('chart-container')
     if (loaded) {
       if (error) {
-        return <div>{error}</div>
+        return <div className="chart-container error">{error}</div>
       } else if (chartData && chartData.length) {
         return (
           <LineChart 
-            width={600}
-            height={400}
+            width={(container && container[0]).clientWidth}
+            height={(container && container[0]).clientHeight}
             data={chartData}
             hideXLabel={true}
             hideYLabel={true}
             pointRadius={3}
-            onPointHover={(obj) => `Power: ${obj.x}<br />Effect: ${obj.y}`}
+            onPointHover={(obj) => `${this.props.xName || 'x'}: ${obj.x}<br />${this.props.yName || 'y'}: ${obj.y}`}
           />
         );
       } else {
-        return <div>Ooops... :(</div>
+        return <div className="chart-container error">Ooops... :(</div>
       }
     } else {
-      return <div>Loading...</div>
+      return <div className="chart-container">Loading...</div>
     }
   }
 }

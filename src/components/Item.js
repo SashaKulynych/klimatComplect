@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import Header from './Header'
 import Footer from './Footer'
@@ -12,7 +13,7 @@ import {AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid} from 'recharts';
 import * as API from '../actions/api'
 
 
-let toast = { background: '#fed328', text: "#5f5f5f" };
+let toast = { background: '#fed328', text: "#5f5f5f" }
 class Item extends Component {
     constructor(props){
         super(props)
