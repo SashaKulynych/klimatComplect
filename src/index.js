@@ -57,18 +57,7 @@ ReactDOM.render(
                 <Route exact path="/Paper/:id" component={Paper} />
                 <Route exact path="/brands" component={brands} />
                 <Route exact path="/documentation/:id" component={products}/>
-                <Route exact path="/super/mega/secret/route/for/chart/development" render={() => {
-                    return <CustomChart 
-                        height={300}
-                        width={300}
-                        innerRadius={100}
-                        outerRadius={110}
-                        id="d3-arc"
-                        backgroundColor="#e6e6e6"
-                        foregroundColor="#00ff00"
-                        percentComplete={50}
-                    />
-                }}/>
+                <Route exact path="/super/mega/secret/route/for/chart/development" component={CustomChart}/>
             </Switch>
         </ConnectedRouter>
     </Provider>

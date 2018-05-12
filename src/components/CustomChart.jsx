@@ -1,216 +1,114 @@
-import React, { PropTypes, Component } from 'react';
-import * as d3 from "d3";
-import { getPointsForChart } from '../actions/api'; 
+import React from 'react';
+import LineChart from 'react-linechart';
+import '../../node_modules/react-linechart/dist/styles.css';
+import { getPointsForChart } from '../actions/api';
 
-class CustomChart extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     loaded: true,
-  //     error: false,
-  //     chartData: [
-  //       // {x: 2, y: 20},
-  //       // {x: 8, y: 19},
-  //       // {x: 9, y: 12},
-  //       // {x: 12, y: 11},
-  //       // {x: 16, y: 11},
-  //       // {x: 22, y: 12},
-  //       // {x: 35, y: 10},
-  //       // {x: 36, y: 8},
-  //       // {x: 37, y: 9},
-  //       // {x: 45, y: 22},
-  //       // {x: 60, y: 3}
-  //       {
-  //         name: "Lavon Hilll I",
-  //         BMI: 20.57,
-  //         age: 12,
-  //         birthday: "1994-10-26T00:00:00.000Z",
-  //         city: "Annatown",
-  //         married: true,
-  //         index: 1
-  //       },
-  //       {
-  //         name: "Clovis Pagac",
-  //         BMI: 24.28,
-  //         age: 26,
-  //         birthday: "1995-11-10T00:00:00.000Z",
-  //         city: "South Eldredtown",
-  //         married: false,
-  //         index: 3
-  //       },
-  //       {
-  //         name: "Gaylord Paucek",
-  //         BMI: 24.41,
-  //         age: 30,
-  //         birthday: "1975-06-12T00:00:00.000Z",
-  //         city: "Koeppchester",
-  //         married: true,
-  //         index: 5
-  //       },
-  //       {
-  //         name: "Ashlynn Kuhn MD",
-  //         BMI: 23.77,
-  //         age: 32,
-  //         birthday: "1985-08-09T00:00:00.000Z",
-  //         city: "West Josiemouth",
-  //         married: false,
-  //         index: 6
-  //       },
-  //     ]
-  //   }
+class CustomChart extends React.Component {
 
-  // }
-
-  // componentDidMount() {
-  //   // getPointsForChart()
-  //   //   .then(this.formatPoints)
-  //   //   .then(datasets => {
-  //   //     this.setState({
-  //   //       datasets: {
-
-  //   //       },
-  //   //       loaded: true,
-  //   //     })
-  //   //   })
-  //   //   .catch(error => {
-  //   //     this.setState({
-  //   //       error,
-  //   //       loaded: true       
-  //   //     })
-  //   //   })
-  // }
-
-  // formatPoints(obj) {
-  //   let result = {};
-  //   if (obj && obj.fiveDutyPoints) {
-  //     result = obj.fiveDutyPoints.reduce((prev, el) => {
-  //       return {
-  //         x: [...prev.x, el.correctedQV],
-  //         y: [...prev.y, el.correctedPsF]
-  //       }
-  //     }, {
-  //       x: [],
-  //       y: []
-  //     })
-  //   }
-      
-  //   return {
-  //     labels: result.x,
-  //     datasets: [{
-  //       label: "",
-  //       data: result.y,
-  //       backgroundColor: 'rgba(255, 99, 132, 0.2)',
-  //       borderColor: 'rgba(255,99,132,1)',
-  //       borderWidth: 1
-  //     }]
-  //   }
-  // }
-
-  // render() {
-  //   // if (this.state.loaded) {
-  //   //   if (this.state.error || !this.state.data) {
-  //   //     return <div>{this.state.error || "Can't build :("}</div>
-  //   //   } else {
-  //   //     return <Line data={this.state.data} />
-  //   //   }
-  //   // } else {
-  //   //   return <div>Building...</div>
-  //   // }
-  //   const width = 700,
-  //     height = 300,
-  //     margins = {left: 100, right: 100, top: 50, bottom: 50},
-  //     title = "User sample",
-  //     // chart series,
-  //     // field: is what field your data want to be selected
-  //     // name: the name of the field that display in legend
-  //     // color: what color is the line
-  //     chartSeries = [
-  //       {
-  //         field: 'BMI',
-  //         name: 'BMI',
-  //         color: '#ff7f0e'
-  //       }
-  //     ],
-  //     // your x accessor
-  //     x = function(d) {
-  //       return d.index;
-  //     }
-  //   return (
-  //     <ProgressArc
-  //       height={300}
-  //       width={300}
-  //       innerRadius={100}
-  //       outerRadius={110}
-  //       id="d3-arc"
-  //       backgroundColor="#e6e6e6"
-  //       foregroundColor="#00ff00"
-  //       percentComplete={this.state.percentComplete}
-  //     />
-  //   )
-  // }
-// +===============================================================================================
   constructor() {
     super()
-    this.displayName = 'ProgressArc';
+    this.state = {
+      loaded: true,
+      error: false,
+      chartData: [
+        {									
+          color: "steelblue", 
+          points: [
+            {x: 1, y: 24},
+            {x: 3, y: 15},
+            {x: 7, y: 3}
+          ] 
+        },
+        {									
+          color: "green", 
+          points: [
+            {x: 5, y: 2},
+            {x: 6, y: 5},
+            {x: 9, y: -3}
+          ] 
+        }
+      ]
+    }
   }
 
-  componentDidMount() {
-    this.drawArc();
+  listOfColors = [
+    'magenta',
+    'maroon',
+    'mediumAquaMarine',
+    'mediumBlue',
+    'mediumOrchid',
+    'mediumPurple',
+    'mediumSeaGreen',
+    'mediumSlateBlue',
+    'mediumSpringGreen',
+    'mediumTurquoise',
+    'mediumVioletRed',
+    'midnightBlue' 
+  ]
+
+  componentWillMount() {
+    if (this.props.article) {
+      if (Array.isArray(this.props.article)) {
+        const charts = this.props.article.map(el => {
+          return this.formatPoints(getPointsForChart(el))
+        })
+        this.setState({
+          chartData: charts
+        })
+      } else {
+        const chart = this.formatPoints(getPointsForChart(this.props.article))
+        this.setState({
+          chartData: [chart]
+        })
+      }
+    } else {
+      console.error("Charts error: No article provided")
+      this.setState({
+        error: "No article provided"
+      })
+    }
   }
 
-  componentDidUpdate() {
-    this.redrawArc();
-  }
-
-  drawArc() {
-    const context = this.setContext();
-    this.setBackground(context);
-    this.setForeground(context);
-  }
-
-  redrawArc() {
-    const context = d3.select('#d3-arc');
-    context.remove();
-    this.drawArc();
-  }
-
-  setContext() {
-    const { height, width, id} = this.props;
-    return d3.select(this.refs.arc).append('svg')
-      .attr('height', height)
-      .attr('width', width)
-      .attr('id', id)
-      .append('g')
-      .attr('transform', `translate(${height / 2}, ${width / 2})`);
-  }
-
-  setBackground(context) {
-    return context.append('path')
-      .datum({ endAngle: this.tau })
-      .style('fill', this.props.backgroundColor)
-      .attr('d', this.arc());
-  }
-
-  setForeground(context) {
-    return context.append('path')
-    .datum({ endAngle: this.tau * this.props.percentComplete })
-    .style('fill', this.props.foregroundColor)
-    .attr('d', this.arc());
-  }
-
-  tau = Math.PI * 2;
-
-  arc() {
-    return d3.arc()
-      .innerRadius(this.props.innerRadius)
-      .outerRadius(this.props.outerRadius)
-      .startAngle(0)
+  formatPoints(obj) {
+    const points = obj &&
+      obj.fiveDutyPoints &&
+      obj.fiveDutyPoints.reduce((prev, el) => {
+        return [...prev, {
+          x: el.correctedQV,
+          y: el.correctedPsF
+        }]
+      }, [])
+    return points &&
+      points.length &&
+      {
+        color: this.listOfColors.pop(),
+        points: points
+      }
   }
 
   render() {
-    return (
-      <div ref="arc"></div>
-    )
+    const {loaded, error, chartData} = this.state;
+    if (loaded) {
+      if (error) {
+        return <div>{error}</div>
+      } else if (chartData && chartData.length) {
+        return (
+          <LineChart 
+            width={600}
+            height={400}
+            data={chartData}
+            hideXLabel={true}
+            hideYLabel={true}
+            pointRadius={3}
+            onPointHover={(obj) => `Power: ${obj.x}<br />Effect: ${obj.y}`}
+          />
+        );
+      } else {
+        return <div>Ooops... :(</div>
+      }
+    } else {
+      return <div>Loading...</div>
+    }
   }
 }
 
