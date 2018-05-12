@@ -53,7 +53,6 @@ class MainPage extends Component {
     }
 
     render() {
-        return <CustomChart />
         let settings = {
             dots: true,
             infinite: true,

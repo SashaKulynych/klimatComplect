@@ -4,11 +4,10 @@
   "private": true,
   "dependencies": {
     "aphrodite": "^1.2.5",
-    "chart.js": "^2.7.2",
+    "d3": "^5.4.0",
     "history": "^4.7.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
-    "react-chartjs-2": "^2.7.2",
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
     "react-loader-spinner": "^2.0.0",

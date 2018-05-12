@@ -28,6 +28,7 @@ import AllPaper from './components/AllPaper'
 import Paper from './components/Paper'
 import brands from './components/Brands'
 import products from "./components/products"
+import CustomChart from "./components/CustomChart"
 
 
 export const history = createHistory()
@@ -56,6 +57,18 @@ ReactDOM.render(
                 <Route exact path="/Paper/:id" component={Paper} />
                 <Route exact path="/brands" component={brands} />
                 <Route exact path="/documentation/:id" component={products}/>
+                <Route exact path="/super/mega/secret/route/for/chart/development" render={() => {
+                    return <CustomChart 
+                        height={300}
+                        width={300}
+                        innerRadius={100}
+                        outerRadius={110}
+                        id="d3-arc"
+                        backgroundColor="#e6e6e6"
+                        foregroundColor="#00ff00"
+                        percentComplete={50}
+                    />
+                }}/>
             </Switch>
         </ConnectedRouter>
     </Provider>
