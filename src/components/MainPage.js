@@ -11,6 +11,7 @@ import YouTube from 'react-youtube';
 
 
 const opts = {
+
     height: '340',
     width: "600",
     playerVars: { // https://developers.google.com/youtube/player_parameters
