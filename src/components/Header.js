@@ -405,7 +405,7 @@ class Header extends Component {
                                         <li onClick={()=>this.props.history.push('/service')}><span>Сервіс</span></li>
                                     </ul>
 
-                                    <span data-toggle="collapse" data-target="#2">КАТЕГОРІЇ &#8595;</span>
+                                    <span data-toggle="collapse" data-target="#2">ПРОДУКЦІЯ &#8595;</span>
                                     <ul id="2" className="collapse">
                                         {manufacts}
                                     </ul>
@@ -438,7 +438,7 @@ class Header extends Component {
                                         </ul>
                                         <ul>
                                             <li>
-                                                <span style={{paddingLeft:"40px"}}   data-toggle="collapse" data-target="#2">КАТЕГОРІЇ</span>
+                                                <span style={{paddingLeft:"40px"}}   data-toggle="collapse" data-target="#2">ПРОДУКЦІЯ</span>
                                                 <ul style={{marginLeft:"-12px"}} id="2" className="collapse">
                                                     {manufacts}
                                                 </ul>
@@ -446,7 +446,7 @@ class Header extends Component {
                                         </ul>
                                         <ul>
                                             <li>
-                                                <span  onClick={()=>this.props.history.push('/brands')} style={{paddingLeft:"40px"}}>БРЕНДИ</span>
+                                                <span  onClick={()=>this.props.history.push('/brands')} style={{paddingLeft:"20px"}}>БРЕНДИ</span>
                                             </li>
                                         </ul>
                                     </div>

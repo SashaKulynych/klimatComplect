@@ -105,7 +105,7 @@ class brands extends Component {
                                                                     />
                                                             </span>
                                             </div>
-                                            <div className="col-6" style={{margin: "auto"}}>
+                                            <div className="col-6" style={{margin: "auto",fontSize:18}}>
                                                 Наша продукція відповідає всім чинним в даний час директивам, які
                                                 регулюють
                                                 питання енергоефективності, а в деяких випадках навіть значно
@@ -222,7 +222,7 @@ class brands extends Component {
                                             кожен з яких може бути адаптований під технічні вимоги наших клієнтів.
                                         </div>
                                     </div>
-                                    <div className="row col-12 mt-2 mb-5">
+                                    <div className="row col-12 mt-2 mb-5 container_wrap">
                                         < div className="col-lg-6">
                                             <img style={{height: "100%"}} className="col-lg-12"
                                                  src={require('./images/CI parking1.jpg')}/>

@@ -16,12 +16,12 @@ const categories_2 = [
     {id: 6, name: "Механічні аксесуари"},
 ]
 const categories = [
-    {id: 1, name: "Вентиляційні установки"},
-    {id: 2, name: "Дахові вентилятори"},
-    {id: 3, name: "Електричні аксесуари"},
-    {id: 4, name: "Канальні вентилятори"},
-    {id: 5, name: "Кухонні вентилятори"},
-    {id: 6, name: "Механічні аксесуари"},
+    {id: 1, name: "Вентиляційні установки", img:'./images/Дахові вентилятори/Покрівельні вентилятори.jpg'},
+    {id: 2, name: "Дахові вентилятори",img:'./images/Дахові вентилятори/Покрівельні вентилятори.jpg'},
+    {id: 3, name: "Електричні аксесуари",img:'./images/Дахові вентилятори/Покрівельні вентилятори.jpg'},
+    {id: 4, name: "Канальні вентилятори",img:'./images/Канальні вентилятори/Канальні вентилятори.jpg'},
+    {id: 5, name: "Кухонні вентилятори",img:'./images/Кухонні вентилятори/кухонні вентилятори.jpg'},
+    {id: 6, name: "Механічні аксесуари",img:'./images/Дахові вентилятори/Покрівельні вентилятори.jpg'},
 ]
 
 
@@ -46,6 +46,7 @@ class products extends Component {
     render() {
         let cat = this.state.tabb === 2 ? categories : categories_2;
         console.log(cat)
+
         let categoriess = cat.map((value, i) => {
             return (
                 <div style={{margin: "auto"}}>
@@ -57,7 +58,7 @@ class products extends Component {
                             </div>
                             <div className="item_2" style={{background: "#fff"}}>
                                 <img className="DocmPicture"
-                                     src={require('./images/Вентиляційні установки/ACCUFLOW.png')} alt=""/>
+                                     src={require(`${value.img}`)} alt=""/>
                             </div>
                         </li>
                     </a>
@@ -87,9 +88,9 @@ class products extends Component {
                     <div className="docm_div_1">
                         {this.state.tabb === 2 ? (<span>RUCK</span>) : (<span>SODEKA</span>)}
                     </div>
-                    <div className="row col-12 doc_text">
-                        <img className="col-3" src={require('./images/icon/401.png')} />
-                        <p className="col-9" style={{fontSize:17}}>
+                    <div className="row col-12 doc_text container_wrap">
+                        <img className="col-lg-3 col-sm-6" src={require('./images/icon/401.png')} />
+                        <p className="col-lg-9 col-sm-12" style={{fontSize:17}}>
                             Ruck Ventilatoren GmbH - сімейне підприємство, яке спеціалізується на виробництві високоякісних систем кондиціонування і вентиляції. Компанія поставляє на ринок широкий спектр стандартних виробів, таких як канальні вентилятори для круглих і прямокутних повітроводів, а також приділяє велику увагу розробці нової продукції і пошуку індивідуальних рішень.
                             <br/> <br />
                             З моменту заснування всі зусилля сімейного підприємства спрямовані на постійне вдосконалення продукції. Всі співробітники працюють в невимушеній сімейній обстановці, намагаючись досліджувати межі технічних можливостей і реалізувати їх на практиці з використанням сучасних засобів.

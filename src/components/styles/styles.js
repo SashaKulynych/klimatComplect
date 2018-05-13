@@ -29,12 +29,12 @@ export const styles = StyleSheet.create({
             fontSize:"30px",
             color:"white",
             marginTop:5,
-            marginBottom:0,
+            marginBottom:-40,
             fontFamily:"Arial",
             ':nth-child(1n) > img':{
                 width:181,
                 position:'relative',
-                zIndex:101
+                zIndex:1
             }
 
         }

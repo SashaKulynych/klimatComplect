@@ -16,7 +16,7 @@ class Reference extends Component {
                 <div className="text">
                     <div className="textContainer container_wrap">
                         <div className="col-12 row ">
-                            <div className="col-6 text_ser">
+                            <div className="col-lg-6 col-sm-12 text_ser">
                                 <p>За 15 років існування, ми сформували та вишколили професійний сервісний відділ, який
                                     досконало знає усі особливості та переваги нашого обладнання, тонкощі його
                                     інсталювання
@@ -33,7 +33,7 @@ class Reference extends Component {
                                     виникне
                                     така необхідність. </p>
                             </div>
-                            <img className="col-6" src={require("./images/icon/ser_1.png")}/>
+                            <img className="col-lg-6 col-sm-12" src={require("./images/icon/ser_1.png")}/>
                         </div>
                         <div className="row col-12">
                             <div className="col-lg-6 col-sm-12 ref_bloc_1">
@@ -50,7 +50,7 @@ class Reference extends Component {
                             </div>
                         </div>
                         <p> .</p>
-                        <p className="text-center" style={{fontSize:20}}>Не зволікайте та звертайтеся до нашого сервісного відділу при будь-яких ознаках несправності
+                        <p className="col-12 text-center" style={{fontSize:20}}>Не зволікайте та звертайтеся до нашого сервісного відділу при будь-яких ознаках несправності
                             або якщо виникають питання стосовно особливостей експлуатації обладнання.</p>
                     </div>
                 </div>

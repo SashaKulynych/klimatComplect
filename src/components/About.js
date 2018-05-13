@@ -20,8 +20,8 @@ class About extends Component {
                             зарекомендувати себе, як експерта та надійного партнера.</p>
 
                         <div className="row col-12">
-                            <img className="col-6" src={require("./images/icon/as_1.png")}/>
-                            <div className="col-6 as_list">
+                            <img className="col-lg-6 col-sm-12" src={require("./images/icon/as_1.png")}/>
+                            <div className="col-lg-6 col-sm-12 as_list">
                                 <p>Ми пропонуємо такі послуги:</p>
                                 <ul>
                                     <li><img width="30" src={require("./images/icon/006.png")}/> Прямі поставки
@@ -65,7 +65,7 @@ class About extends Component {
                             лікарні,
                             басейни, спортивні комплекси та інше.</p>
                         <div className="row col-12">
-                            <div className="col-6" style={{padding:0}}>
+                            <div className="col-lg-6 col-sm-12" style={{padding:0}}>
                                 <p>На нашому сайті ви можете ознайомитися з результатами роботи компанії, що
                                     представлені у
                                     розділі «Об’єкти».</p>
@@ -86,7 +86,7 @@ class About extends Component {
                                     повсякденність
                                     пересічних українців.</p>
                             </div>
-                            <img className="col-6" src={require("./images/icon/as_2.png")}/>
+                            <img className="col-lg-6 col-sm-12" src={require("./images/icon/as_2.png")}/>
                         </div>
                     </div>
                 </div>

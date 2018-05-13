@@ -275,7 +275,7 @@ class MainPage extends Component {
                 <div className="container-fluid advantageSection">
                     <div className="container_wrap">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-lg-6 col-sm-12">
                             <div className="advantage">
                                 Головна перевага нашого обладнання
                                 - саме енергоефективність, що
