@@ -96,8 +96,8 @@ class CustomChart extends React.Component {
       } else if (chartData && chartData.length) {
         return (
           <LineChart 
-            width={(container && container[0]).clientWidth}
-            height={(container && container[0]).clientHeight}
+            width={this.props.width || (container && container[0] && container[0].clientWidth) || 300}
+            height={this.props.height || (container && container[0] && container[0].clientHeight) || 300}
             data={chartData}
             hideXLabel={true}
             hideYLabel={true}
