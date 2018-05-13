@@ -23,9 +23,13 @@ ul{
     max-width: 1366px;
     margin: auto!important;
 }
-.slider {
+.slider1 {
     background-size: cover!important;
-    background: url("../images/background.png");
+    background: url("../images/slid1.jpg");
+}
+.slider2 {
+    background-size: cover!important;
+    background: url("../images/slid2.jpg");
 }
 @media (max-width: 992px) {
     .container_wrap{
@@ -36,6 +40,7 @@ ul{
         /*background-size: auto;*/
         /*background-position-x: center;*/
     /*}*/
+
 
     .support .numbers{
         font-size: 19px!important;
@@ -119,13 +124,13 @@ ul{
 
 
     .allNews{
-        text-align: center;
-        padding: 10px 120px!important;
+        text-align: justify;
+        width: 100%!important;
         font-size: 20px!important;
     }
     .advantage{
         padding: 50px 0 50px 0!important;
-        text-align: center;
+        text-align: center!important;
         font-size: 20px!important;
     }
     .whatYouGetText{
@@ -145,6 +150,10 @@ ul{
     }
     .footerList{
         text-align: center!important;
+    }
+
+    .achievementBlock{
+        margin: 0 0 10px 0!important;
     }
     .footer .footerCenter{
         border-left: none!important;
@@ -169,12 +178,6 @@ ul{
         padding-top: 0!important;
         height: 200px!important;
     }
-    .graf_2{
-        display: block!important;
-    }
-    .graf_1{
-        display: none!important;
-    }
     .item .saveButtonStyle, .item .addButtonStyle{
         margin: 5px auto!important;
     }
@@ -197,9 +200,33 @@ ul{
     .img_g{
         padding: 0!important;
     }
+    .text .textContainer{
+        padding: 0!important;
+    }
+    .footer .footerLogoTextLeft{
+        top:37px!important;
+        right: 256px!important;
+    }
 
 }
 
+
+.graf_1{
+    width: 300px;
+    height: 300px;
+}
+
+.text_ser{
+    padding: 0;
+}
+
+.doc_text{
+    padding-top: 70px;
+}
+
+.text_ser div{
+  border: 1px solid black;
+}
 
 .img_g{
     padding-right: 89px;
@@ -260,9 +287,9 @@ ul{
     cursor: default;
 }
 .achievementBlock{
-    margin: 0 20px 10px 0!important;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    margin: 0 20px 10px 0;
     padding: 0;
-    border: 1px solid #ffca13;
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
@@ -275,8 +302,9 @@ ul{
     cursor: default;
 }
 
+
+
 .toptitle{
-    background: #ffcc1a;
     border-radius: 10px 10px 0 0;
 }
 
@@ -320,7 +348,11 @@ ul{
 
 .docm_div_1{
     width: 100%;
-    background: #4b9bff;
+    background: #fdbb1d;
+}
+
+.list_sodeks li{
+    padding-bottom: 5px;
 }
 
 .docm_div_2{
@@ -330,7 +362,7 @@ ul{
 }
 
 .DocmPicture{
-    width: 86px;
+    width: 100%;
 }
 
 .categoryView_1{
@@ -351,11 +383,10 @@ ul{
 .itemTop{
     float: right;
     text-align: center;
-    width: 120px;
+    width: 100%;
     font-size:14px;
     margin:10px;
     color:#000;
-    background:#ffd75f ;
 }
 
 .potd{
@@ -423,7 +454,10 @@ ul{
 
 .aboutUs{
     margin-top: 25px;
-    background-color: #f1f1f1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/bg_home.gif");;
 }
 .about{
     cursor: default;
@@ -504,9 +538,9 @@ cursor: pointer;
     height:100%;
 }
 .allNews{
+    text-align: center;
     width: 166px;
     margin-bottom:25px;
-    padding:2px 29px;
     background-color: #fddb1d;
     font-size: 20px;
     font-family: "Open Sans";
@@ -548,12 +582,15 @@ cursor: pointer;
 }
 
 .advantageSection{
-    height: 461px;
-    background-color: #f1f1f1;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/bg_home_1.png");;
 }
 .advantage{
-    text-align: right;
-    padding:129px 20px 50px 25px;
+    text-align: left;
+    padding:86px 20px 50px 25px;
     color:#2d2d2d;
     font-size: 20px;
     font-family: "Open Sans";
@@ -571,12 +608,28 @@ cursor: pointer;
     margin-bottom:50px;
     max-width:850px;
 }
+
+.ref_bloc_1{
+    padding: 50px 51px 150px;
+    text-align: center;
+}
+
+.as_list p{
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.as_list ul li{
+    padding-bottom: 10px;
+}
+
 .whatYouGetBlock{
     min-height:475px;
     width:250px;
     text-align: center;
     border-radius: 150px;
-    background-color: #fddb1d;
+    border: 1px solid #484848;
     padding:10px;
     margin:10px auto;
 }

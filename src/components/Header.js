@@ -405,7 +405,7 @@ class Header extends Component {
                                         <li onClick={()=>this.props.history.push('/service')}><span>Сервіс</span></li>
                                     </ul>
 
-                                    <span data-toggle="collapse" data-target="#2">КАТЕГОРІЇ &#8595;</span>
+                                    <span data-toggle="collapse" data-target="#2">ПРОДУКЦІЯ &#8595;</span>
                                     <ul id="2" className="collapse">
                                         {manufacts}
                                     </ul>
@@ -415,6 +415,7 @@ class Header extends Component {
                                         <p style={{paddingLeft:25, color:"gray"}}>ПІДТРИМКА</p>
                                         <li  onClick={()=>this.props.history.push('/contacts')}><span>Зв'язок</span></li>
                                     </ul>
+                                    <span onClick={()=>window.open(require("./images/Price Ruck 2018.pdf"),'_blank')}>ПРАЙС</span>
                                     <span onClick={()=>this.props.history.push('/documentation')}>ТЕХНІЧНА ДОКУМЕНТАЦІЯ</span>
                                 </div>
                             </div>
@@ -437,7 +438,7 @@ class Header extends Component {
                                         </ul>
                                         <ul>
                                             <li>
-                                                <span style={{paddingLeft:"40px"}}   data-toggle="collapse" data-target="#2">КАТЕГОРІЇ</span>
+                                                <span style={{paddingLeft:"40px"}}   data-toggle="collapse" data-target="#2">ПРОДУКЦІЯ</span>
                                                 <ul style={{marginLeft:"-12px"}} id="2" className="collapse">
                                                     {manufacts}
                                                 </ul>
@@ -445,7 +446,7 @@ class Header extends Component {
                                         </ul>
                                         <ul>
                                             <li>
-                                                <span  onClick={()=>this.props.history.push('/brands')} style={{paddingLeft:"40px"}}>БРЕНДИ</span>
+                                                <span  onClick={()=>this.props.history.push('/brands')} style={{paddingLeft:"20px"}}>БРЕНДИ</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -463,7 +464,7 @@ class Header extends Component {
                             <div className="col menu-right-part d-flex justify-content-end">
                                 <ul>
                                     <li>
-                                        <span>ПРАЙС</span>
+                                        <span onClick={()=>window.open(require("./images/Price Ruck 2018.pdf"),'_blank')}>ПРАЙС</span>
                                     </li>
                                 </ul>
                                 <ul>

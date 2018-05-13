@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import Footer from './Footer'
-import {styles} from './styles/styles'
 import { css, StyleSheet } from 'aphrodite'
-import {host} from '../actions/const'
 import { connect } from 'react-redux'
 import './styles/category.css'
 import { withRouter } from 'react-router'
-import * as API from "../actions/api";
-import Loader from 'react-loader-spinner'
 import {BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid,Legend,ResponsiveContainer } from 'recharts';
 // import * as API from '../actions/api'
 

@@ -72,13 +72,13 @@ class Support extends Component {
                                 <div className="phones">
                                     <i className="fas fa-phone-volume phoneIcon"/>
                                     <div className="numbers">
-                                        <span>+38 (044) 379 10 90 Київ</span>
+                                        <span>+38 (044) 379 10 90 КИЇВ</span>
                                         <span>+38 (066) 279 10 90</span>
                                         <span>+38 (068) 279 10 90</span>
                                         <span>+38 (093) 279 10 90</span>
-                                        <span>+38 (057) 732 01 33 Харків</span>
-                                        <span>+38 (097) 127 23 42 Львів</span>
-                                        <span>+38 (067) 675 63 77 Івано-Франківськ</span>
+                                        <span>+38 (057) 732 01 33 ХАРКІВ</span>
+                                        <span>+38 (097) 127 23 42 ЛЬВІВ</span>
+                                        <span>+38 (067) 675 63 77 ІВАНО-ФРАНКІВСЬК</span>
                                     </div>
                                 </div>
                                 <div className="emails">

@@ -1,3 +1,4 @@
+
 .header a{
     color: #323232;
     text-decoration: none;
@@ -6,7 +7,8 @@
     color: white;
 }
 .header .mainMenu{
-    height: 100px;
+    border-top: 1px solid black;
+    height: 80px;
     display: block;
 }
 .header .hideMainMenu{
@@ -14,7 +16,7 @@
 }
 
 .bg_header{
-    background-color: #323232;
+    background-color: #fff;
     padding: 0;
 }
 .header ul{
@@ -33,12 +35,13 @@
 .headerCircles{
     display: flex;
     align-items: center;
-    height:49px;
+    height:65px;
     /*margin:0;*/
     padding: 0px 55px;
 }
 
 .fb{
+    background: #3c5a9a;
     margin-left: 0!important;
 }
 
@@ -54,6 +57,20 @@
     background-color: #ffdc00!important;
     transition: 0.9s;
 }
+
+.tw{
+    background: #de574b;
+}
+
+.ig{
+    background:
+
+            linear-gradient( #400080, transparent),
+            linear-gradient(
+    200deg, #d047d1, #ff0000,    #ffff00);
+}
+
+
 
 .phone_1{
     background: #2d2d2d;
@@ -79,21 +96,20 @@
 }
 
 .fb a{
-    color: black;
+    color: #fff;
 }
 
 .ig a{
-    color: #000;
+    color: #fff;
 }
 
 .tw a{
-    color: #000;
+    color: #fff;
 }
 
 .circle, .fb,.tw,.ig{
     cursor: pointer;
     border-radius: 50px;
-    background-color: white;
     height: 35px;
     width: 35px;
     margin: 10px 8px;
@@ -104,7 +120,7 @@
     transition: 0.9s;
 }
 .header .text{
-    color:white;
+    color:#000;
     font-size: 15px;
     font-family: Open Sans;
 }
@@ -124,8 +140,8 @@
     z-index: 100;
     width: 150px;
     text-align: center;
-    background: #323232;
-    color: white;
+    background: #fff;
+    color: #000;
     font-family: "Open Sans";
     font-size: 15px;
 
@@ -172,7 +188,6 @@
 /*dropdown menu left part*/
 .header .menu-left-part{
     z-index: 50;
-    padding-left: 40px;
 }
 .header .menu-left-part ul
 {
@@ -189,7 +204,7 @@
     color:#323232;
     text-decoration:none;
     font-size:20px;
-    padding: 30px 50px 40px 15px;
+    padding: 30px 79px 40px 73px;
     font-family:Open Sans;
 }
 
@@ -212,7 +227,7 @@
     display:none;
     position:absolute;
     z-index: 100;
-    top:96%;
+    top:78%;
     left:0;
     background:#fff;
     padding-bottom:10px;
@@ -250,7 +265,6 @@
 /*dropdown menu right part*/
 .header .menu-right-part{
     z-index: 50;
-    padding-right: 40px;
 }
 .header .menu-right-part ul
 {
@@ -267,7 +281,7 @@
     color:#323232;
     text-decoration:none;
     font-size:20px;
-    padding: 30px 15px 40px 40px;
+    padding: 30px 62px 40px 40px;
     font-family:"Open Sans"
 }
 
@@ -289,7 +303,7 @@
     display:none;
     position:absolute;
     z-index: 100;
-    top:96%;
+    top:79%;
     right:-49px;
     background:#fff;
     padding-bottom:10px;
@@ -421,28 +435,33 @@
 }
 .header .logoTextStyle{
     color: #828282;
-    font-size: 15px;
+    font-size: 22px;
     font-family: "Open Sans";
     font-weight: bold;
     cursor: default;
 }
 .header .logoTextRight{
     position: absolute;
-    bottom: 35px;
-    margin-left: 93px;
+    bottom: 84px;
+    background: #fff;
+    padding: 0 20px 0 20px;
+    margin-left: 146px;
 }
 .header .logoTextLeft{
     position: absolute;
-    bottom: 35px;
+    bottom: 84px;
+    background: #fff;
+    padding: 0 37px 0 20px;
     color: #d3731c;
-    margin-left: -79px;
+    margin-left: -116px;
 }
 .header .logoImage{
     cursor: pointer;
     position: absolute;
     z-index: 60;
     transition:all 0.9s ease;
-    width: 95px;
+    width: 138px;
+    top:-66px;
 }
 .header .consent{
     margin-top: 20px;
