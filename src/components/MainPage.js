@@ -108,7 +108,7 @@ class MainPage extends Component {
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     <div className="carousel-inner" role="listbox">
-                        <div className="carousel-item active  slider" >
+                        <div className="carousel-item active  slider1" >
                             <div className="container_wrap " style={{paddingTop:150}}>
                             <div className="carousel-caption d-md-block slid">
                                 <div className="row">
@@ -127,7 +127,7 @@ class MainPage extends Component {
                             </div>
                             </div>
                         </div>
-                        <div className="carousel-item  slider" >
+                        <div className="carousel-item  slider2" >
                             <div className="container_wrap " style={{paddingTop:150}}>
                                 <div className="carousel-caption d-md-block slid">
                                     <div className="row">
@@ -144,7 +144,7 @@ class MainPage extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="carousel-item  slider" >
+                        <div className="carousel-item  slider1" >
                             <div className="container_wrap " style={{paddingTop:150}}>
                                 <div className="carousel-caption d-md-block slid">
                                     <div className="row">
