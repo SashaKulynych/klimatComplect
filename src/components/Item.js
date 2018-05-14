@@ -44,6 +44,7 @@ class Item extends Component {
 
         let userInfo = await JSON.parse(localStorage.getItem('userInfo'));
         await API.getProduct(this.props.match.params.id).then((value) => {
+            console.log('getProduct',value);
             this.setState({product: value})
         });
 
@@ -56,6 +57,7 @@ class Item extends Component {
             if(value.article !== 0){
                 return (
                     API.getArticle(value.article).then((response) => {
+                        console.log('getArticle',response)
                         this.setState({article:response})
                     })
                 )

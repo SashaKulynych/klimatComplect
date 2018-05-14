@@ -30,11 +30,10 @@ export async function getNews() {
 export async function getArticle(article) {
     return await fetch("http://www.ruck.eu/backend/rest/products/fpn/"+article+"?frequency=50&api_key=public", {
         method: 'GET',
-        headers: {
-            'Accept': 'text/plain;charset=utf-8',
-            'Content-Type': 'text/plain;charset=utf-8',
-        }
-    }).then((response)=>response.text())
+        mode: 'cors'
+    }).then((response)=>{
+        console.log(response)
+    })
 }
 
 
