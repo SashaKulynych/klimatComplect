@@ -51,7 +51,7 @@ class CustomChart extends React.Component {
     if (this.props.article) {
       if (Array.isArray(this.props.article)) {
         const charts = this.props.article.map(el => {
-          return this.formatPoints(getPointsForChart(el))
+          return this.formatPoints(getPointsForChart(el)).filter(Boolean)
         })
         this.setState({
           chartData: charts
@@ -59,7 +59,7 @@ class CustomChart extends React.Component {
       } else {
         const chart = this.formatPoints(getPointsForChart(this.props.article))
         this.setState({
-          chartData: [chart]
+          chartData: [chart].filter(Boolean)
         })
       }
     } else {
